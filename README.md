@@ -3,4 +3,4 @@
 ###Equipo
 
 + Damián Lattenero
-+ Daniel Wyrytowski
++ Pablo Loiacono
