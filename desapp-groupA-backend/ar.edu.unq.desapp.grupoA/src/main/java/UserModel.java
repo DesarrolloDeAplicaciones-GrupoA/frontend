@@ -8,6 +8,9 @@ public class UserModel {
     private String fullName;
     private String email;
     private Vehicle vehicle;
-    private Score scoreUser;
+    private Score scoreAsDriver;
+    private Score scoreAsAccompanist;
+    private int scorePoints;
+
 
 }

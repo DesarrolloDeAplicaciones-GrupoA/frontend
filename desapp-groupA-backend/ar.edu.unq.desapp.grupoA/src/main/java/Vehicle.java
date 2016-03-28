@@ -8,6 +8,6 @@ public class Vehicle {
     private String model;
     private int capacity;
     private Travel travel;
-
+    private Score scoreCar;
 
 }
