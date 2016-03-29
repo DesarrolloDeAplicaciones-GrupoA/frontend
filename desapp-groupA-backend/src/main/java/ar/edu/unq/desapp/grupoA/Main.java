@@ -1,4 +1,4 @@
-package java;
+package ar.edu.unq.desapp.grupoA;
 
 /**
  * Created by DamianRafael on 22/3/2016.
