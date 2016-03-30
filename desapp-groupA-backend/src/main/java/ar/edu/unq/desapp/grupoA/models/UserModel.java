@@ -44,4 +44,12 @@ public class UserModel {
     public int getPoints() {
         return points;
     }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
 }

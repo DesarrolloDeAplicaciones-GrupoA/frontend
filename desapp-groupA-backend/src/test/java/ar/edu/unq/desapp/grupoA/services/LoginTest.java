@@ -2,7 +2,8 @@ package ar.edu.unq.desapp.grupoA.services;
 
 import ar.edu.unq.desapp.grupoA.models.UserModel;
 import org.junit.Assert;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Created by DamianRafael on 29/3/2016.
@@ -10,6 +11,7 @@ import org.junit.*;
 public class LoginTest {
     private Login login;
     private UserModel user;
+
     @Before
     public void setUp(){
         this.login = new Login();
@@ -29,6 +31,7 @@ public class LoginTest {
         Assert.assertEquals(this.user.getAccompanistScores().size(), 0);
         Assert.assertEquals(this.user.getPoints(), 0);
     }
+
 
 
 }
