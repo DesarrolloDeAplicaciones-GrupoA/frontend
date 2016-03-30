@@ -1,4 +1,4 @@
-package ar.edu.unq.desapp.grupoA;
+package ar.edu.unq.desapp.grupoA.models;
 
 import org.joda.time.DateTime;
 
