@@ -1,5 +1,6 @@
 package ar.edu.unq.desapp.grupoA.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,8 +11,8 @@ public class UserModel {
     private String fullName;
     private String email;
     private Vehicle vehicle;
-    private List<Score> driverScore;
-    private List<Score> accompanistScore;
+    private List<Score> driverScores;
+    private List<Score> accompanistScores;
     private int points;
     private List<Exchange> exchanges;
 
@@ -19,6 +20,9 @@ public class UserModel {
     public UserModel(String fullName, String email) {
         this.fullName = fullName;
         this.email = email;
+        this.accompanistScores = new ArrayList<>();
+        this.driverScores = new ArrayList<>();
+        this.points = 0;
     }
 
     public String getFullName() {
@@ -27,5 +31,17 @@ public class UserModel {
 
     public String getEmail() {
         return email;
+    }
+
+    public List<Score> getDriverScores() {
+        return driverScores;
+    }
+
+    public List<Score> getAccompanistScores() {
+        return accompanistScores;
+    }
+
+    public int getPoints() {
+        return points;
     }
 }
