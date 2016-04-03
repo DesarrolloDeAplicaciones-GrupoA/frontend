@@ -31,7 +31,13 @@ public class LoginTest {
         Assert.assertEquals(this.user.getAccompanistScores().size(), 0);
         Assert.assertEquals(this.user.getPoints(), 0);
     }
-
-
+    @Test
+     public void initialDriverWithOutTravel(){
+        Assert.assertEquals(this.user.getTravels().size(), 0);
+    }
+    @Test
+    public void initialDriverWithOutExchanges(){
+        Assert.assertEquals(this.user.getExchanges().size(), 0);
+    }
 
 }

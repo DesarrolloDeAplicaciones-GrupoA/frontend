@@ -3,9 +3,7 @@ package ar.edu.unq.desapp.grupoA.models;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Loiacono.P671 on 22/03/2016.
- */
+
 public class Vehicle {
 
     private String brand;
@@ -24,5 +22,9 @@ public class Vehicle {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    public List<Score> getScores() {
+        return scores;
     }
 }

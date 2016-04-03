@@ -1,5 +1,6 @@
 package ar.edu.unq.desapp.grupoA.models;
 
+import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class UserModel {
     private List<Score> accompanistScores;
     private int points;
     private List<Exchange> exchanges;
+    private List<Travel> travels;
 
 
     public UserModel(String fullName, String email) {
@@ -22,6 +24,8 @@ public class UserModel {
         this.email = email;
         this.accompanistScores = new ArrayList<>();
         this.driverScores = new ArrayList<>();
+        this.exchanges= new ArrayList<>();
+        this.travels = new ArrayList<>();
         this.points = 0;
     }
 
@@ -51,5 +55,17 @@ public class UserModel {
 
     public Vehicle getVehicle() {
         return vehicle;
+    }
+
+    public void addTravel(Travel travel){
+        this.travels.add(travel);
+    }
+
+    public List<Travel> getTravels() {
+        return travels;
+    }
+
+    public List<Exchange> getExchanges() {
+        return exchanges;
     }
 }

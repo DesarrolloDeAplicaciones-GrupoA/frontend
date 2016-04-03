@@ -20,6 +20,7 @@ public class VehicleAddingTest {
     public void addingVehicleToUserTest(){
         Assert.assertEquals(this.user.getVehicle().getBrand(), "Ford");
         Assert.assertEquals(this.user.getVehicle().getCapacity(), 4);
+        Assert.assertEquals(this.user.getVehicle().getScores().size(), 0);
     }
 
 }
