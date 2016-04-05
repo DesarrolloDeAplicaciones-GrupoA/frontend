@@ -25,3 +25,24 @@ Ver [Vision](./docs/document_vision.pdf).
 + Damián Lattenero
 + Pablo Loiacono
 + Leandro Gomez
+
+## Roadmap:
+
+### Sprint 1:
+
+* Core
+    * [x] Configuracion de travis
+    * [ ] Estado del Build en verde
+    * [ ] Coverage al 90%
+    * [ ] Diagrama UML (en <Proyecto>/docs)
+    * [ ] 3 mockups de las ventanas de la aplicacion - Home, buscar recorridos y alta de usuario.
+    * [ ] Pantalla prototipo del uso de la API de gmaps (mostrar recorrido, crear un recorrido)
+* Modelo
+    * [ ] Modelo de objetos completo e implementado
+    * [ ] Clean code segun materia (todo en ingles)
+* Testing
+    * [ ] Testing segun las pautas de la materia
+
+### Sprint 2:
+
+__TBD__
