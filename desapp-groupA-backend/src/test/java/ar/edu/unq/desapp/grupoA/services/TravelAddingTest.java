@@ -2,6 +2,7 @@ package ar.edu.unq.desapp.grupoA.services;
 
 import ar.edu.unq.desapp.grupoA.models.Route;
 import ar.edu.unq.desapp.grupoA.models.UserModel;
+import ar.edu.unq.desapp.grupoA.testUtis.factories.RouteTestFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.joda.time.Interval;
@@ -27,7 +28,8 @@ public class TravelAddingTest {
         frequency.add(DateTimeConstants.MONDAY);
         frequency.add(DateTimeConstants.WEDNESDAY);
         frequency.add(DateTimeConstants.FRIDAY);
-        this.travelAdding.createTravel(user,"Viaje Trabajo",50,20,new Route(),rangeHoures,frequency);
+        Route route = new RouteTestFactory().fromConstitucionToCorrientes();
+        this.travelAdding.createTravel(user,"Viaje Trabajo",50,20,route,rangeHoures,frequency);
 
 }
     @Test
