@@ -13,7 +13,7 @@ Proyecto de la materia "Desarrollo de aplicaciones" de la carrera "Tecnicatura e
 
 Plataforma donde los usuarios pueden coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas.
 
-Ver [Vision](./docs/document_vision.pdf).
+Ver [Vision](./docs/documento_vision.pdf).
 
 ## Profesores:
 
