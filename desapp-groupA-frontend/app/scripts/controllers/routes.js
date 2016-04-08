@@ -16,5 +16,9 @@ angular.module('desappGroupABackendApp')
             { id: 2, latitude: -34.709613, longitude: -58.280337 }
         ];
 
-        $scope.map = { route: route, center: { latitude: -34.7132642, longitude: -58.2768611 }, zoom: 15 };
+        $scope.map = {
+          route: route,
+          center: { latitude: -34.7132642, longitude: -58.2768611 },
+          zoom: 15
+        };
     });

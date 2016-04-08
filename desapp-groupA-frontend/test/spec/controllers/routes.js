@@ -24,4 +24,8 @@ describe('Controller: RoutesCtrl', function () {
   it('should attach a map with a center', function () {
     expect(scope.map.center).not.toBeUndefined();
   });
+
+  it('should attach a map with a zoom', function () {
+    expect(scope.map.zoom).not.toBeUndefined();
+  });
 });
