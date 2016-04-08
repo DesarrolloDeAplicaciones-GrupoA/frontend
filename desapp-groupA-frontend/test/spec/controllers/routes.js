@@ -18,6 +18,10 @@ describe('Controller: RoutesCtrl', function () {
   }));
 
   it('should attach a map', function () {
-    expect(RoutesCtrl.map).toBeUndefined();
+    expect(scope.map).not.toBeUndefined();
+  });
+
+  it('should attach a map with a center', function () {
+    expect(scope.map.center).not.toBeUndefined();
   });
 });
