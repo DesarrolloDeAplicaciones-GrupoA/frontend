@@ -15,7 +15,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1096579115221-fcil707bjs6g4t5plgkf7fjk9cd4c4rq.apps.googleusercontent.com">
 </head>
@@ -45,7 +45,32 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#/">Home</a></li>
                     <li><a ng-href="#/routes">Rutas</a></li>
-                    <li><a ng-href="#/about">About</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
+                                    <span class="glyphicon glyphicon-list-alt"></span> About the project
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
+                                    <span class="glyphicon glyphicon-heart"></span> from the A-team
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA">
+                                    <span class="glyphicon glyphicon-sort"></span> See on Gihub</a>
+                            </li>
+                            <li>
+                                <a href="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA"><img src="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA.svg?branch=master"
+                                    /></a>
+                            </li>
+                            <li>
+                                <a href="https://www.codacy.com/app/lalo/DesarrolloDeAplicaciones-GrupoA"><img src="https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017" /></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -54,42 +79,6 @@
     <div class="container">
         <div ng-view=""></div>
     </div>
-
-    <div class="footer">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-6 footer-links">
-                    <ul class="list-inline">
-                        <li>
-                            <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
-                                <span class="glyphicon glyphicon-heart"></span> from the A-team
-                            </a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
-                                <span class="glyphicon glyphicon-sort"></span> See on Gihub</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 footer-links">
-                    <ul class="list-inline">
-                        <li>
-                            <a class="footer-link" href="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA/">
-                                <span class="glyphicon glyphicon glyphicon-flash"></span>See on Travis</a>
-                            <a href="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA"><img src="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA.svg?branch=master"
-                                /></a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="https://www.codacy.com/app/lalo/DesarrolloDeAplicaciones-GrupoA">
-                                <span class="glyphicon glyphicon glyphicon-ok"></span> See on </a>
-                            <a href="https://www.codacy.com/app/lalo/DesarrolloDeAplicaciones-GrupoA"><img src="https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
