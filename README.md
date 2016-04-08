@@ -32,11 +32,11 @@ Ver [Vision](./docs/documento_vision.pdf).
 
 * Core
     * [x] Configuracion de travis
-    * [ ] Estado del Build en verde
+    * [x] Estado del Build en verde
     * [ ] Coverage al 90%
     * [ ] Diagrama UML (en <Proyecto>/docs)
-    * [ ] 3 mockups de las ventanas de la aplicacion - Home, buscar recorridos y alta de usuario.
-    * [ ] Pantalla prototipo del uso de la API de gmaps (mostrar recorrido, crear un recorrido)
+    * [x] 3 mockups de las ventanas de la aplicacion - Home, buscar recorridos y alta de usuario.
+    * [x] Pantalla prototipo del uso de la API de gmaps (mostrar recorrido, crear un recorrido)
 * Modelo
     * [ ] Modelo de objetos completo e implementado
     * [ ] Clean code segun materia (todo en ingles)
