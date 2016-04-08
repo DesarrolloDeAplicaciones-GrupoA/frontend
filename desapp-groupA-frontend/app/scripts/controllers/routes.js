@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name desappGroupABackendApp.controller:AboLoginCtrlutCtrl
+ * @name desappGroupABackendApp.controller:RoutesCtrl
  * @description
- * # LoginCtrl
+ * # RoutesCtrl
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')

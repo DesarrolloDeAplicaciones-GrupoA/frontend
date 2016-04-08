@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name desappGroupABackendApp.controller:AboLoginCtrlutCtrl
+ * @name desappGroupABackendApp.controller:LoginCtrl
  * @description
  * # LoginCtrl
  * Controller of the desappGroupABackendApp
