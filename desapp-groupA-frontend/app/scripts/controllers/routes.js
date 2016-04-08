@@ -9,5 +9,5 @@
  */
 angular.module('desappGroupABackendApp')
     .controller('RoutesCtrl', function($scope) {
-        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+        $scope.map = { center: { latitude: -34.7132642, longitude: -58.2768611 }, zoom: 15 };
     });
