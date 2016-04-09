@@ -17,4 +17,9 @@ public class ApplicationRequestService {
         return request;
 
     }
+
+    public ApplicationRequest approveApplicationRequest(ApplicationRequest request) {
+        request.approve();
+        return request;
+    }
 }
