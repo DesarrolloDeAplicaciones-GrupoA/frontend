@@ -1,12 +1,9 @@
 package ar.edu.unq.desapp.grupoA.models;
 
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Loiacono.P671 on 22/03/2016.
- */
+
 public class UserModel {
 
     private String fullName;
@@ -17,6 +14,7 @@ public class UserModel {
     private int points;
     private List<Exchange> exchanges;
     private List<Travel> travels;
+    private List<ApplicationRequest> requestedApplications;
 
 
     public UserModel(String fullName, String email) {
@@ -24,9 +22,10 @@ public class UserModel {
         this.email = email;
         this.accompanistScores = new ArrayList<>();
         this.driverScores = new ArrayList<>();
-        this.exchanges= new ArrayList<>();
+        this.exchanges = new ArrayList<>();
         this.travels = new ArrayList<>();
         this.points = 0;
+        this.requestedApplications = new ArrayList<>();
     }
 
     public String getFullName() {
@@ -57,7 +56,7 @@ public class UserModel {
         return vehicle;
     }
 
-    public void addTravel(Travel travel){
+    public void addTravel(Travel travel) {
         this.travels.add(travel);
     }
 
@@ -67,5 +66,9 @@ public class UserModel {
 
     public List<Exchange> getExchanges() {
         return exchanges;
+    }
+
+    public void addRequestedApplications(ApplicationRequest request) {
+        this.requestedApplications.add(request);
     }
 }

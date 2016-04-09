@@ -3,6 +3,7 @@ package ar.edu.unq.desapp.grupoA.services;
 import ar.edu.unq.desapp.grupoA.models.Route;
 import ar.edu.unq.desapp.grupoA.models.UserModel;
 import ar.edu.unq.desapp.grupoA.testUtis.factories.RouteTestFactory;
+import ar.edu.unq.desapp.grupoA.testUtis.factories.UserModelTestFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.joda.time.Interval;
@@ -21,7 +22,7 @@ public class TravelAddingTest {
 
     @Before
     public void setUp(){
-        this.user = new UserModel("Foo Bar", "foobar@sample.com");
+        this.user = new UserModelTestFactory().getUser();
         this.travelAdding= new TravelAdding();
         Interval rangeHoures = new Interval(new DateTime(2000, 1, 01, 9, 0), new DateTime(2000, 1, 01, 14, 0));
         List<Integer> frequency = new ArrayList<Integer>();
