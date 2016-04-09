@@ -71,4 +71,8 @@ public class UserModel {
     public void addRequestedApplications(ApplicationRequest request) {
         this.requestedApplications.add(request);
     }
+
+    public void addDriverScore(Score score) {
+        this.driverScores.add(score);
+    }
 }
