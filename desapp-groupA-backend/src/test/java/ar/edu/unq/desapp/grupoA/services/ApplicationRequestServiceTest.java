@@ -1,6 +1,7 @@
 package ar.edu.unq.desapp.grupoA.services;
 
 
+import ar.edu.unq.desapp.grupoA.exceptions.InvalidTransitionException;
 import ar.edu.unq.desapp.grupoA.models.ApplicationRequest;
 import ar.edu.unq.desapp.grupoA.models.Travel;
 import ar.edu.unq.desapp.grupoA.models.UserModel;
@@ -50,11 +51,24 @@ public class ApplicationRequestServiceTest {
         assertTrue(aprovedRequest.isApproved());
     }
 
+    @Test(expected = InvalidTransitionException.class)
+    public void testApplicationRequestIsApprovedThenPending() {
+        ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
+        try {
+            aprovedRequest.reject();
+        }catch(InvalidTransitionException ite){
+            assertEquals(ite.getMessage(), "can not pass from approved to reject");
+            throw ite;
+        }
+    }
+
     @Test
     public void testApplicationRequestIsReject() {
         ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
         assertTrue(rejectedRequest.isRejected());
     }
+
+
 
 
 
