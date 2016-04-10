@@ -50,5 +50,14 @@ public class ApplicationRequestServiceTest {
         assertTrue(aprovedRequest.isApproved());
     }
 
+    @Test
+    public void testApplicationRequestIsReject() {
+        ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
+        assertTrue(rejectedRequest.isRejected());
+    }
+
+
+
+
 
 }

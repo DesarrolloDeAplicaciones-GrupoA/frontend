@@ -46,4 +46,12 @@ public class ApplicationRequest {
     public void setState(ApplicationRequestState state) {
         this.state = state;
     }
+
+    public boolean isRejected() {
+        return state.isReject();
+    }
+
+    public void reject() {
+        this.state.reject();
+    }
 }

@@ -22,4 +22,9 @@ public class ApplicationRequestService {
         request.approve();
         return request;
     }
+
+    public ApplicationRequest rejectApplicationRequest(ApplicationRequest request) {
+        request.reject();
+        return request;
+    }
 }

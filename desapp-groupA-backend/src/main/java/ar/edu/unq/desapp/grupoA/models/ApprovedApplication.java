@@ -5,7 +5,7 @@ import ar.edu.unq.desapp.grupoA.exceptions.InvalidTransitionException;
 /**
  * Created by Loiacono.P671 on 09/04/2016.
  */
-public class ApprovedAplication implements ApplicationRequestState {
+public class ApprovedApplication implements ApplicationRequestState {
     @Override
     public boolean isPending() {
         return false;

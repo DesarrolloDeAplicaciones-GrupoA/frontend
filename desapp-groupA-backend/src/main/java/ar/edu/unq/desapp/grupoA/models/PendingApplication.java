@@ -28,12 +28,14 @@ public class PendingApplication implements ApplicationRequestState {
     @Override
     public void approve() {
 
-        this.applicationRequest.setState(new ApprovedAplication());
+        this.applicationRequest.setState(new ApprovedApplication());
 
     }
 
     @Override
     public void reject() {
+
+        this.applicationRequest.setState(new RejectedApplication());
 
     }
 }
