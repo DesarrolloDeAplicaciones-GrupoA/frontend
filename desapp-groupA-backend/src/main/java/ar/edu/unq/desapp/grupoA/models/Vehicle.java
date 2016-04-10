@@ -27,4 +27,8 @@ public class Vehicle {
     public List<Score> getScores() {
         return scores;
     }
+
+    public void addVehicleScore(Score score) {
+        this.scores.add(score);
+    }
 }
