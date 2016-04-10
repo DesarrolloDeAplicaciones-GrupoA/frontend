@@ -39,11 +39,13 @@ public class ApplicationRequestServiceTest {
         assertEquals(request.getTravel(), travel);
     }
 
+    @Test
     public void testApplicationRequestIsPendingByDefaul() {
         assertTrue(request.isPending());
     }
 
-    public void testApplicationRequestIsApproved(){
+    @Test
+    public void testApplicationRequestIsApproved() {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         assertTrue(aprovedRequest.isApproved());
     }
