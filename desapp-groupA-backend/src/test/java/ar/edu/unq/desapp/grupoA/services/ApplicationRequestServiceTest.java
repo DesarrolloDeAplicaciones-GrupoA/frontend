@@ -56,7 +56,7 @@ public class ApplicationRequestServiceTest {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         try {
             aprovedRequest.reject();
-        }catch(InvalidTransitionException ite){
+        } catch (InvalidTransitionException ite) {
             assertEquals(ite.getMessage(), "can not pass from approved to reject");
             throw ite;
         }
@@ -68,10 +68,16 @@ public class ApplicationRequestServiceTest {
         assertTrue(rejectedRequest.isRejected());
     }
 
+    @Test(expected = InvalidTransitionException.class)
+    public void testApplicationRequestIsRejectThenApproved() {
+        ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
+        try {
+            rejectedRequest.approve();
+        } catch (InvalidTransitionException ite) {
 
-
-
-
-
+            assertEquals(ite.getMessage(), "can not pass from rejected to approved");
+            throw ite;
+        }
+    }
 
 }
