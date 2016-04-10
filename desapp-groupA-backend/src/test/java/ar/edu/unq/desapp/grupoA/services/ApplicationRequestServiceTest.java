@@ -55,7 +55,7 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsApprovedThenRejected() {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         try {
-            this.service.rejectApplicationRequest(request);
+            this.service.rejectApplicationRequest(aprovedRequest);
         } catch (InvalidTransitionException ite) {
             assertEquals(ite.getMessage(), "can not pass from approved to reject");
             throw ite;
@@ -66,7 +66,7 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsApprovedThenApproved() {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         try {
-            this.service.approveApplicationRequest(request);
+            this.service.approveApplicationRequest(aprovedRequest);
         } catch (InvalidTransitionException ite) {
             assertEquals(ite.getMessage(), "Allready approved");
             throw ite;
@@ -83,7 +83,7 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsRejectThenApproved() {
         ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
         try {
-            this.service.approveApplicationRequest(request);
+            this.service.approveApplicationRequest(rejectedRequest);
         } catch (InvalidTransitionException ite) {
 
             assertEquals(ite.getMessage(), "can not pass from rejected to approved");
@@ -95,7 +95,7 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsRejectThenrejected() {
         ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
         try {
-            this.service.rejectApplicationRequest(request);
+            this.service.rejectApplicationRequest(rejectedRequest);
         } catch (InvalidTransitionException ite) {
 
             assertEquals(ite.getMessage(), "Already rejected");
