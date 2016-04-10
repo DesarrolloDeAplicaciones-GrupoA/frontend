@@ -26,6 +26,7 @@ public class UserModel {
         this.travels = new ArrayList<>();
         this.points = 0;
         this.requestedApplications = new ArrayList<>();
+        this.accompanistScores = new ArrayList<>();
     }
 
     public String getFullName() {
@@ -74,5 +75,9 @@ public class UserModel {
 
     public void addDriverScore(Score score) {
         this.driverScores.add(score);
+    }
+
+    public void addAccompanistScore(Score score) {
+        this.accompanistScores.add(score);
     }
 }
