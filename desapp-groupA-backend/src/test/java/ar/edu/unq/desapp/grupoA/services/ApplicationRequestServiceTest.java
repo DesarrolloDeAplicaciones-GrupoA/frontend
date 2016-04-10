@@ -52,12 +52,23 @@ public class ApplicationRequestServiceTest {
     }
 
     @Test(expected = InvalidTransitionException.class)
-    public void testApplicationRequestIsApprovedThenPending() {
+    public void testApplicationRequestIsApprovedThenRejected() {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         try {
-            aprovedRequest.reject();
+            this.service.rejectApplicationRequest(request);
         } catch (InvalidTransitionException ite) {
             assertEquals(ite.getMessage(), "can not pass from approved to reject");
+            throw ite;
+        }
+    }
+
+    @Test(expected = InvalidTransitionException.class)
+    public void testApplicationRequestIsApprovedThenApproved() {
+        ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
+        try {
+            this.service.approveApplicationRequest(request);
+        } catch (InvalidTransitionException ite) {
+            assertEquals(ite.getMessage(), "Allready approved");
             throw ite;
         }
     }
