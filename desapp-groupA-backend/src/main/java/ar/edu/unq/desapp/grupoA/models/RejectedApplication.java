@@ -27,7 +27,7 @@ public class RejectedApplication implements ApplicationRequestState {
 
     @Override
     public void reject() {
-
+        throw new InvalidTransitionException("Already rejected");
     }
 
 }

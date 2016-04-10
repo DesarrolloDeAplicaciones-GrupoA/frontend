@@ -83,10 +83,22 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsRejectThenApproved() {
         ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
         try {
-            rejectedRequest.approve();
+            this.service.approveApplicationRequest(request);
         } catch (InvalidTransitionException ite) {
 
             assertEquals(ite.getMessage(), "can not pass from rejected to approved");
+            throw ite;
+        }
+    }
+
+    @Test(expected = InvalidTransitionException.class)
+    public void testApplicationRequestIsRejectThenrejected() {
+        ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
+        try {
+            this.service.rejectApplicationRequest(request);
+        } catch (InvalidTransitionException ite) {
+
+            assertEquals(ite.getMessage(), "Already rejected");
             throw ite;
         }
     }
