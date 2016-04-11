@@ -6,6 +6,11 @@ import ar.edu.unq.desapp.grupoA.models.UserModel;
 public class DriverScoreService extends BaseScoreService<UserModel> {
 
     @Override
+    protected void markBadScoresAsApplied(UserModel user) {
+        user.markBadScoresAsApplied();
+    }
+
+    @Override
     protected int badScoresCount(UserModel user) {
         return user.driverBadScores().size();
     }

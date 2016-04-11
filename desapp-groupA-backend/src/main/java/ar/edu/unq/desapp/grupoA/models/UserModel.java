@@ -120,4 +120,8 @@ public class UserModel implements ScoringModel {
     public List<Score> driverBadScores() {
         return this.getDriverScores().stream().filter((score -> !score.isGood())).collect(Collectors.toList());
     }
+
+    public void markBadScoresAsApplied() {
+        this.getAccompanistBadScores().stream().forEach(Score::applied);
+    }
 }

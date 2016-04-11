@@ -49,4 +49,8 @@ public class Vehicle implements ScoringModel {
     public List<Score> getBadScores() {
         return this.getScores().stream().filter((score -> !score.isGood())).collect(Collectors.toList());
     }
+
+    public void markBadScoresAsApplied() {
+        this.getBadScores().stream().forEach(Score::applied);
+    }
 }

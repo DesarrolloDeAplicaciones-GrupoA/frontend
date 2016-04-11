@@ -50,6 +50,14 @@ public abstract class BaseScoreServiceTest<T extends ScoringModel> extends TestC
         assertEquals(pointsBefore - 1000, this.getUserPoints());
     }
 
+    public void testDoNotSubtractPointsOnThreeBadScore() {
+        int pointsBefore = this.getUserPoints();
+        service.createScore(this.scoringModel, travel, false);
+        service.createScore(this.scoringModel, travel, false);
+        service.createScore(this.scoringModel, travel, false);
+        assertEquals(pointsBefore - 1000, this.getUserPoints());
+    }
+
     protected abstract int getUserPoints();
 
 

@@ -17,10 +17,18 @@ public abstract class BaseScoreService<T extends ScoringModel> {
     private void applyScore(T scoring, Score score) {
         if (score.isGood()) {
             this.applyGoodScore(scoring, score);
+            this.markScoreAsApplied(score);
         } else if (this.badScoresCount(scoring) == 2) {
             this.applyBadScore(scoring, score);
+            this.markBadScoresAsApplied(scoring);
         }
     }
+
+    private void markScoreAsApplied(Score score) {
+        score.applied();
+    }
+
+    protected abstract void markBadScoresAsApplied(T scoring);
 
     private void applyBadScore(T scoring, Score score) {
         UserModel user = this.getUserModel(scoring);
