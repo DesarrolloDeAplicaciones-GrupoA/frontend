@@ -2,8 +2,10 @@ package ar.edu.unq.desapp.grupoA.models;
 
 import ar.edu.unq.desapp.grupoA.services.scoring.ScoringModel;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class UserModel implements ScoringModel {
@@ -105,5 +107,17 @@ public class UserModel implements ScoringModel {
 
     public void addPoints(int points) {
         this.points += points;
+    }
+
+    public void removePoints(int points) {
+        this.points -= points;
+    }
+
+    public List<Score> getAccompanistBadScores() {
+        return this.getAccompanistScores().stream().filter((score -> !score.isGood())).collect(Collectors.toList());
+    }
+
+    public List<Score> driverBadScores() {
+        return this.getDriverScores().stream().filter((score -> !score.isGood())).collect(Collectors.toList());
     }
 }

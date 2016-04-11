@@ -2,8 +2,10 @@ package ar.edu.unq.desapp.grupoA.models;
 
 import ar.edu.unq.desapp.grupoA.services.scoring.ScoringModel;
 
+import java.nio.file.attribute.UserDefinedFileAttributeView;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Vehicle implements ScoringModel {
@@ -42,5 +44,9 @@ public class Vehicle implements ScoringModel {
 
     public UserModel getDriver() {
         return driver;
+    }
+
+    public List<Score> getBadScores() {
+        return this.getScores().stream().filter((score -> !score.isGood())).collect(Collectors.toList());
     }
 }

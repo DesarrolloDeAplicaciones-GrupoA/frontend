@@ -8,6 +8,11 @@ import ar.edu.unq.desapp.grupoA.models.UserModel;
 public class AccompanistScoreService extends BaseScoreService<UserModel> {
 
     @Override
+    protected int badScoresCount(UserModel user) {
+        return user.getAccompanistBadScores().size();
+    }
+
+    @Override
     protected UserModel getUserModel(UserModel accompanist) {
         return accompanist;
     }

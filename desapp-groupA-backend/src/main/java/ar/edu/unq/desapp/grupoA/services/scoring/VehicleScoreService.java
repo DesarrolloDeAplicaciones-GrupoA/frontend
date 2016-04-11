@@ -8,6 +8,11 @@ import ar.edu.unq.desapp.grupoA.models.Vehicle;
 public class VehicleScoreService extends BaseScoreService<Vehicle> {
 
     @Override
+    protected int badScoresCount(Vehicle vehicle) {
+        return vehicle.getBadScores().size();
+    }
+
+    @Override
     protected UserModel getUserModel(Vehicle vehicle) {
         return vehicle.getDriver();
     }
