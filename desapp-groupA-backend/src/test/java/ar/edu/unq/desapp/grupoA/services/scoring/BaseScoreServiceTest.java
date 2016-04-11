@@ -33,7 +33,7 @@ public abstract class BaseScoreServiceTest<T extends ScoringModel> extends TestC
 
     public void testAddPointForGoodReputation() {
         int pointsBefore = this.getUserPoints();
-        service.createScore(this.scoringModel, travel, false);
+        service.createScore(this.scoringModel, travel, true);
         assertEquals(pointsBefore + 500, this.getUserPoints());
     }
 
