@@ -23,4 +23,9 @@ public class VehicleAddingTest {
         Assert.assertEquals(this.user.getVehicle().getScores().size(), 0);
     }
 
+    @Test
+    public void vehicleHasADriver(){
+        Assert.assertEquals(this.user.getVehicle().getDriver(), user);
+    }
+
 }

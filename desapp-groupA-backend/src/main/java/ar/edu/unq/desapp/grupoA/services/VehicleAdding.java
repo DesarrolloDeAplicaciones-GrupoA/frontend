@@ -6,7 +6,7 @@ import ar.edu.unq.desapp.grupoA.models.Vehicle;
 public class VehicleAdding {
 
     public void createVehicle(UserModel user, String brand, int capacity){
-        user.setVehicle(new Vehicle(brand,capacity));
+        user.setVehicle(new Vehicle(brand,capacity, user));
     }
 
 }
