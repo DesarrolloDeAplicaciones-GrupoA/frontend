@@ -15,6 +15,8 @@ public class UserModel {
     private List<Exchange> exchanges;
     private List<Travel> travels;
     private List<ApplicationRequest> requestedApplications;
+    private List<Message> messagesSend;
+    private List<Message> messagesReceived;
 
 
     public UserModel(String fullName, String email) {
@@ -27,6 +29,8 @@ public class UserModel {
         this.points = 0;
         this.requestedApplications = new ArrayList<>();
         this.accompanistScores = new ArrayList<>();
+        this.messagesSend = new ArrayList<>();
+        this.messagesReceived = new ArrayList<>();
     }
 
     public String getFullName() {
@@ -79,5 +83,21 @@ public class UserModel {
 
     public void addAccompanistScore(Score score) {
         this.accompanistScores.add(score);
+    }
+
+    public void addMessageSend(Message messageObjet) {
+        this.messagesSend.add(messageObjet);
+    }
+
+    public void addMessageReceived(Message messageObjet) {
+        this.messagesReceived.add(messageObjet);
+    }
+
+    public List<Message> getMessagesSend() {
+        return messagesSend;
+    }
+
+    public List<Message> getMessagesReceived() {
+        return messagesReceived;
     }
 }
