@@ -31,6 +31,14 @@ public abstract class BaseScoreServiceTest<T extends ScoringModel> extends TestC
         assertEquals(this.getScoringModelScores().size(), 1);
     }
 
+    public void testAddPointForGoodReputation() {
+        int pointsBefore = this.getUserPoints();
+        service.createScore(this.scoringModel, travel, false);
+        assertEquals(pointsBefore + 500, this.getUserPoints());
+    }
+
+    protected abstract int getUserPoints();
+
 
     protected abstract void createScoringModel();
 

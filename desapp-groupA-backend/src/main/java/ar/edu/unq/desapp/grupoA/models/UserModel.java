@@ -102,4 +102,8 @@ public class UserModel implements ScoringModel {
     public List<Message> getMessagesReceived() {
         return messagesReceived;
     }
+
+    public void addPoints(int points) {
+        this.points += points;
+    }
 }

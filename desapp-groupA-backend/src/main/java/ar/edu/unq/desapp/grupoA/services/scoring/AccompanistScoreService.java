@@ -8,6 +8,11 @@ import ar.edu.unq.desapp.grupoA.models.UserModel;
 public class AccompanistScoreService extends BaseScoreService<UserModel> {
 
     @Override
+    protected UserModel getUserModel(UserModel accompanist) {
+        return accompanist;
+    }
+
+    @Override
     protected void addScore(UserModel accompanist, Score score) {
         accompanist.addAccompanistScore(score);
     }

@@ -11,6 +11,11 @@ import java.util.List;
 public class DriverScoreServiceTest extends BaseScoreServiceTest<UserModel> {
 
     @Override
+    protected int getUserPoints() {
+        return this.scoringModel.getPoints();
+    }
+
+    @Override
     protected void createScoringModel() {
         this.scoringModel = new UserModelTestFactory().getUser();
     }
