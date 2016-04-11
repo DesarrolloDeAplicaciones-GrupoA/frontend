@@ -10,8 +10,14 @@ public abstract class BaseScoreService<T extends ScoringModel> {
     public Score createScore(T scoring, Travel travel, boolean isGood) {
         Score score = this.getScore(travel, isGood);
         this.addScore(scoring, score);
-        this.applyGoodScore(scoring, score);
+        this.applyScore(scoring, score);
         return score;
+    }
+
+    private void applyScore(T scoring, Score score) {
+        if (score.isGood()) {
+            this.applyGoodScore(scoring, score);
+        }
     }
 
     private void applyGoodScore(T scoring, Score score) {
