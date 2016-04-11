@@ -1,10 +1,12 @@
 package ar.edu.unq.desapp.grupoA.models;
 
+import ar.edu.unq.desapp.grupoA.services.scoring.ScoringModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class UserModel {
+public class UserModel implements ScoringModel {
 
     private String fullName;
     private String email;
