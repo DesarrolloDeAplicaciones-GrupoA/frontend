@@ -10,21 +10,21 @@ public class VehicleAddingTest {
     private VehicleAdding vehicleAdding;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         this.user = new UserModel("Foo Bar", "foobar@sample.com");
         this.vehicleAdding = new VehicleAdding();
-        this.vehicleAdding.createVehicle(user,"Ford", 4);
+        this.vehicleAdding.createVehicle(user, "Ford", 4);
     }
 
     @Test
-    public void addingVehicleToUserTest(){
+    public void addingVehicleToUserTest() {
         Assert.assertEquals(this.user.getVehicle().getBrand(), "Ford");
         Assert.assertEquals(this.user.getVehicle().getCapacity(), 4);
         Assert.assertEquals(this.user.getVehicle().getScores().size(), 0);
     }
 
     @Test
-    public void vehicleHasADriver(){
+    public void vehicleHasADriver() {
         Assert.assertEquals(this.user.getVehicle().getDriver(), user);
     }
 

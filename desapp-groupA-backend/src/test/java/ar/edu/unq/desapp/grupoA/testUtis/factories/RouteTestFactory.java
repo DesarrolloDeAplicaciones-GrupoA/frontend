@@ -5,7 +5,7 @@ import ar.edu.unq.desapp.grupoA.factories.RouteFactory;
 import ar.edu.unq.desapp.grupoA.models.Route;
 import ar.edu.unq.desapp.grupoA.models.utils.PointFactory;
 
-public class RouteTestFactory extends RouteFactory{
+public class RouteTestFactory extends RouteFactory {
 
     public Route fromConstitucionToCorrientes() {
         PointFactory factory = new PointFactory();

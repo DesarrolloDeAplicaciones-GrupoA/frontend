@@ -4,6 +4,7 @@ package ar.edu.unq.desapp.grupoA.models;
 import ar.edu.unq.desapp.grupoA.factories.RouteFactory;
 import ar.edu.unq.desapp.grupoA.models.utils.PointFactory;
 import org.junit.Test;
+
 import static org.junit.Assert.assertNotNull;
 
 public class RoutesTest {

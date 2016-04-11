@@ -9,7 +9,7 @@ public class UserModelTestFactory {
 
     private UserModel user;
 
-    public UserModel getUser(){
-        return (new UserModel("Pepe Santillan","pepeSantillan@gmail.com"));
+    public UserModel getUser() {
+        return (new UserModel("Pepe Santillan", "pepeSantillan@gmail.com"));
     }
 }

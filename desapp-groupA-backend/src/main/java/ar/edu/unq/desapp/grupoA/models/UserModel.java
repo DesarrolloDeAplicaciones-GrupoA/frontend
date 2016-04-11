@@ -2,7 +2,6 @@ package ar.edu.unq.desapp.grupoA.models;
 
 import ar.edu.unq.desapp.grupoA.services.scoring.ScoringModel;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

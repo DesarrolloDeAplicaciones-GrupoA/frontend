@@ -13,7 +13,7 @@ public class LoginTest {
     private UserModel user;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         this.login = new Login();
         this.user = login.signUp("Foo Bar", "foobar@sample.com");
     }
@@ -26,17 +26,19 @@ public class LoginTest {
     }
 
     @Test
-    public void initialDriverScoreInZero(){
+    public void initialDriverScoreInZero() {
         Assert.assertEquals(this.user.getDriverScores().size(), 0);
         Assert.assertEquals(this.user.getAccompanistScores().size(), 0);
         Assert.assertEquals(this.user.getPoints(), 0);
     }
+
     @Test
-     public void initialDriverWithOutTravel(){
+    public void initialDriverWithOutTravel() {
         Assert.assertEquals(this.user.getTravels().size(), 0);
     }
+
     @Test
-    public void initialDriverWithOutExchanges(){
+    public void initialDriverWithOutExchanges() {
         Assert.assertEquals(this.user.getExchanges().size(), 0);
     }
 

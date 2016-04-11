@@ -2,8 +2,6 @@ package ar.edu.unq.desapp.grupoA.services.scoring;
 
 import ar.edu.unq.desapp.grupoA.models.Score;
 import ar.edu.unq.desapp.grupoA.models.UserModel;
-import ar.edu.unq.desapp.grupoA.services.scoring.BaseScoreServiceTest;
-import ar.edu.unq.desapp.grupoA.services.scoring.DriverScoreService;
 import ar.edu.unq.desapp.grupoA.testUtis.factories.UserModelTestFactory;
 
 import java.util.List;

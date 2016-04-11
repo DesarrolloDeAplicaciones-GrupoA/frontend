@@ -3,7 +3,6 @@ package ar.edu.unq.desapp.grupoA.services;
 import ar.edu.unq.desapp.grupoA.models.Route;
 import ar.edu.unq.desapp.grupoA.models.Travel;
 import ar.edu.unq.desapp.grupoA.models.UserModel;
-import org.joda.time.DateTime;
 import org.joda.time.Interval;
 
 import java.util.List;

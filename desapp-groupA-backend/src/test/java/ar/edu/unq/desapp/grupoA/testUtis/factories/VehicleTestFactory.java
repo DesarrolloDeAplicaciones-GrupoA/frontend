@@ -5,7 +5,7 @@ import ar.edu.unq.desapp.grupoA.models.Vehicle;
 
 public class VehicleTestFactory {
 
-   public Vehicle getVehicle(UserModel drive) {
+    public Vehicle getVehicle(UserModel drive) {
         return new Vehicle("Toyota", 4, drive);
     }
 }
