@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA.svg?branch=master)](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/lalo/DesarrolloDeAplicaciones-GrupoA)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
 
 ## Introduccion:
 
