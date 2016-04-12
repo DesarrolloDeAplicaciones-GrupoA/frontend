@@ -8,5 +8,5 @@ install:
   - curl https://www.jpm4j.org/install/script | sh
   - jpm install com.codacy:codacy-coverage-reporter:assembly
 
-script: mvn test -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
+script: mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
 after_script: codacy-coverage-reporter -l Java -r api/target/site/jacoco/jacoco.xml
