@@ -8,8 +8,11 @@ install:
 script: 
   - mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
 after_script:
+  - ls target/site/jacoco/
   - cd ..
   - git clone https://github.com/codacy/codacy-coverage-reporter.git
   - cd codacy-coverage-reporter/
   - sbt assembly 
-  - java -cp target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r ../desapp-groupA-backend/target/site/jacoco/jacoco.xml
+  - cd ..
+  - java -cp ./codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r desapp-groupA-backend/target/site/jacoco/jacoco.xml
+#  - java -cp target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r ../desapp-groupA-backend/target/site/jacoco/jacoco.xml
