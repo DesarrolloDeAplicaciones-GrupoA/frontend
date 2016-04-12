@@ -4,6 +4,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/coverage/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
+
 ## Introduccion:
 
 Proyecto de la materia "Desarrollo de aplicaciones" de la carrera "Tecnicatura en programacion informatica" de la Universidad de Quilmes, Argentina.
