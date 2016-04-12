@@ -6,7 +6,7 @@ install:
   - cd desapp-groupA-backend/
   - mvn install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
   - curl https://www.jpm4j.org/install/script | sudo sh
-  - jpm install com.codacy:codacy-coverage-reporter:assembly
+  - sudo jpm install com.codacy:codacy-coverage-reporter:assembly
 
 script: mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
 after_script: codacy-coverage-reporter -l Java -r api/target/site/jacoco/jacoco.xml
