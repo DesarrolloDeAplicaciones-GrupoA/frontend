@@ -5,8 +5,11 @@ jdk:
 install: 
   - cd desapp-groupA-backend/
   - mvn install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
-  - curl https://www.jpm4j.org/install/script | sudo sh
-  - sudo jpm install com.codacy:codacy-coverage-reporter:assembly
-
-script: mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
-after_script: codacy-coverage-reporter -l Java -r api/target/site/jacoco/jacoco.xml
+script: 
+  - mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
+after_script:
+  - cd ..
+  - git clone https://github.com/codacy/codacy-coverage-reporter.git
+  - cd codacy-coverage-reporter/
+  - sbt assembly 
+  - java -cp ../codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-1.0.4.jar com.codacy.CodacyCoverageReporter -l Java -r desapp-groupA-backend/target/site/jacoco/jacoco.xml
