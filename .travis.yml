@@ -14,5 +14,4 @@ after_script:
   - cd codacy-coverage-reporter/
   - sbt assembly 
   - cd ..
-  - java -cp ./codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r desapp-groupA-backend/target/site/jacoco/jacoco.xml
-#  - java -cp target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r ../desapp-groupA-backend/target/site/jacoco/jacoco.xml
+  - java -cp ./codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r ./desapp-groupA-backend/target/site/jacoco/jacoco.xml --prefix ./desapp-groupA-backend/src/main/java/
