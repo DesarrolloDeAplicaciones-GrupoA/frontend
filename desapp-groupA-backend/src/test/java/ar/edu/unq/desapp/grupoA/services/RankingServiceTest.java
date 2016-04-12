@@ -33,8 +33,6 @@ public class RankingServiceTest {
         List<UserModel> usuarios = rankingService.getUsuariosEficiente(ranking);
         Stream<Integer> integerStream = usuarios.stream().map((usuario -> usuario.getPoints()));
         integerStream.forEach(point -> Assert.assertEquals(point.intValue(), 5000));
-
-
     }
 
 }

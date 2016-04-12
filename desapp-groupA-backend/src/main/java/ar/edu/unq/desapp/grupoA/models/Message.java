@@ -19,10 +19,6 @@ public class Message {
         return messageText;
     }
 
-    public UserModel getReceiver() {
-        return receiver;
-    }
-
     public boolean isPublic() {
         return isPublic;
     }

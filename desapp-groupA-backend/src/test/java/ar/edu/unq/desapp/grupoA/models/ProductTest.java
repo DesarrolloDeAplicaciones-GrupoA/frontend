@@ -22,6 +22,7 @@ public class ProductTest {
         assertEquals(this.productFactory.getFuelVoucher200().getPointCost(), 28000);
     }
 
+    @Test
     public void testOilChange() {
         assertEquals(this.productFactory.getOilChange().getName(), "Oil Change");
         assertEquals(this.productFactory.getOilChange().getPointCost(), 22000);

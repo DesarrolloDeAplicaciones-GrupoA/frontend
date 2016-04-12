@@ -9,6 +9,7 @@ public class RouteTestFactory extends RouteFactory {
 
     public Route fromConstitucionToCorrientes() {
         PointFactory factory = new PointFactory();
+
         return this.fromTo(factory.create(-34.627712, -58.379718), factory.create(-34.603722, -58.382002));
     }
 }

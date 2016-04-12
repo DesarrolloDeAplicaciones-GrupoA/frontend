@@ -42,6 +42,5 @@ public class TravelAddingTest {
         Assert.assertEquals(this.user.getTravels().get(0).getFuelCost(),50);
         Assert.assertEquals(this.user.getTravels().get(0).getTollCost(),20);
         Assert.assertEquals(this.user.getTravels().get(0).getNameTravel(), "Viaje Trabajo");
-
     }
 }

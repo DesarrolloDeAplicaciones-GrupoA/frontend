@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
@@ -43,12 +44,16 @@ public class ApplicationRequestServiceTest {
     @Test
     public void testApplicationRequestIsPendingByDefaul() {
         assertTrue(request.isPending());
+        assertFalse(request.isApproved());
+        assertFalse(request.isRejected());
     }
 
     @Test
     public void testApplicationRequestIsApproved() {
         ApplicationRequest aprovedRequest = this.service.approveApplicationRequest(request);
         assertTrue(aprovedRequest.isApproved());
+        assertFalse(request.isRejected());
+        assertFalse(request.isPending());
     }
 
     @Test(expected = InvalidTransitionException.class)
@@ -77,6 +82,8 @@ public class ApplicationRequestServiceTest {
     public void testApplicationRequestIsReject() {
         ApplicationRequest rejectedRequest = this.service.rejectApplicationRequest(request);
         assertTrue(rejectedRequest.isRejected());
+        assertFalse(rejectedRequest.isApproved());
+        assertFalse(rejectedRequest.isPending());
     }
 
     @Test(expected = InvalidTransitionException.class)
