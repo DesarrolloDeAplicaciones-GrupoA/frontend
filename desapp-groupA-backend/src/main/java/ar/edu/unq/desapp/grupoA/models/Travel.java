@@ -31,4 +31,8 @@ public class Travel {
     public void addApplicationRequest(ApplicationRequest request) {
         this.applicationRequests.add(request);
     }
+
+    public int getFuelCost() { return fuelCost;  }
+
+    public int getTollCost() { return tollCost;  }
 }

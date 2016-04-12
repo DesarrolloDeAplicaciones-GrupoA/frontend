@@ -35,6 +35,13 @@ public class TravelAddingTest {
 
     @Test
     public void addingTravelToUserTest() {
+        Assert.assertEquals(this.user.getTravels().size(), 1);
+    }
+    @Test
+    public void testValuesTravel(){
+        Assert.assertEquals(this.user.getTravels().get(0).getFuelCost(),50);
+        Assert.assertEquals(this.user.getTravels().get(0).getTollCost(),20);
         Assert.assertEquals(this.user.getTravels().get(0).getNameTravel(), "Viaje Trabajo");
+
     }
 }
