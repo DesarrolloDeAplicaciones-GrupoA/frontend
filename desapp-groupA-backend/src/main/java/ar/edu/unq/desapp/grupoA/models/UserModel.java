@@ -123,4 +123,12 @@ public class UserModel implements ScoringModel {
     public void markBadScoresAsApplied() {
         this.getAccompanistBadScores().stream().forEach(Score::applied);
     }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public void addExchange(Exchange exchange) {
+        this.exchanges.add(exchange);
+    }
 }
