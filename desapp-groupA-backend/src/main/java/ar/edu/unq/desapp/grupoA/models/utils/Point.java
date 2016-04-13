@@ -17,4 +17,10 @@ public class Point {
     public double getLongitude() {
         return longitude;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Point p = (Point) obj;
+        return (p.getLatitude()  == this.latitude) && p.getLongitude() == this.getLongitude();
+    }
 }
