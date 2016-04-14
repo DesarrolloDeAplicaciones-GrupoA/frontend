@@ -1,5 +1,7 @@
 # Subí que te llevo - frontend
 
+[![Build Status](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend.svg?branch=master)](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend)
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
