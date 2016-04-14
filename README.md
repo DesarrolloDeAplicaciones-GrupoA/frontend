@@ -4,7 +4,7 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.15.1.
 
 ## Requirements
-May be instealled using [nvm](https://github.com/creationix/nvm) and  [rbenv](https://github.com/rbenv/rbenv)
+They may be installed using [nvm](https://github.com/creationix/nvm) and  [rbenv](https://github.com/rbenv/rbenv)
 
 * Nodejs 4
 * npm 3
@@ -25,5 +25,3 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
-
-
