@@ -1,50 +1,29 @@
-# Subí que te llevo
+# Subí que te llevo - frontend
 
-[![Build Status](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA.svg?branch=master)](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.15.1.
 
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
+## Requirements
+May be instealled using [nvm](https://github.com/creationix/nvm) and  [rbenv](https://github.com/rbenv/rbenv)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/coverage/9fbc7f94d8cd47e7bd4d8d2b2ef11017)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/DesarrolloDeAplicaciones-GrupoA)
+* Nodejs 4
+* npm 3
+* ruby ~2.2.3
 
-## Introduccion:
+Then run:
 
-Proyecto de la materia "Desarrollo de aplicaciones" de la carrera "Tecnicatura en programacion informatica" de la Universidad de Quilmes, Argentina.
+    $ npm upgrade -g npm
+    $ npm install -g grunt-cli bower yo generator-karma generator-angular
+    $ gem install compass
+    $ npm install
+    $ bower install
+
+## Build & development
+
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
 
 
-## Overview
-
-Plataforma donde los usuarios pueden coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas.
-
-Ver [Vision](./docs/documento_vision.pdf).
-
-## Profesores:
-
-* Cristian López
-* Juan Delpino
-
-## Equipo
-
-+ Damián Lattenero
-+ Pablo Loiacono
-+ Leandro Gomez
-
-## Roadmap:
-
-### Sprint 1:
-
-* Core
-    * [x] Configuracion de travis
-    * [x] Estado del Build en verde
-    * [ ] Coverage al 90%
-    * [ ] Diagrama UML (en <Proyecto>/docs)
-    * [x] 3 mockups de las ventanas de la aplicacion - Home, buscar recorridos y alta de usuario.
-    * [x] Pantalla prototipo del uso de la API de gmaps (mostrar recorrido, crear un recorrido)
-* Modelo
-    * [ ] Modelo de objetos completo e implementado
-    * [ ] Clean code segun materia (todo en ingles)
-* Testing
-    * [ ] Testing segun las pautas de la materia
-
-### Sprint 2:
-
-__TBD__
