@@ -1,17 +1,13 @@
-language: java
+language: node_js
 sudo: required
-jdk:
-  - oraclejdk8
-install: 
-  - cd desapp-groupA-backend/
-  - mvn install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
-script: 
-  - mvn test jacoco:report -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
-after_script:
-  - cp target/site/jacoco/jacoco.xml ../
-  - cd ..
-  - git clone https://github.com/codacy/codacy-coverage-reporter.git
-  - cd codacy-coverage-reporter/
-  - sbt assembly 
-  - cd ..
-  - java -cp codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-1.0.5.jar com.codacy.CodacyCoverageReporter -l Java -r jacoco.xml
+node_js: "4"
+before_install:
+  - rvm install 2.2.3
+install:
+  - npm upgrade -g npm
+  - npm install -g grunt-cli bower yo generator-karma generator-angular
+  - gem install compass
+  - npm install
+  - bower install
+script:
+  - grunt test
