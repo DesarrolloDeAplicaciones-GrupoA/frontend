@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend.svg?branch=master)](https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/8a09263b6ab241b8bf071acb80a35597)](https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/frontend)
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
