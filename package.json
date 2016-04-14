@@ -43,7 +43,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "heroku-postbuild": "npm run prod",
     "postinstall": "bower install && grunt build",
     "start": "node server/app.js",
     "test": "karma start test/karma.conf.js"
