@@ -18,7 +18,6 @@ angular.module('desappGroupABackendApp')
       auth) {
       loginService.googleLogin(auth.detail.code)
         .then(function(response) {
-            debugger;
             localStorageService.set("acccessToken", response.data.token);
             $window.location.assign("/");
           },
