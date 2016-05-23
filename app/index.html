@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="1096579115221-fcil707bjs6g4t5plgkf7fjk9cd4c4rq.apps.googleusercontent.com">
+    <link rel="import" rel="import" href="bower_components/google-signin/google-signin.html">
 </head>
 
 <body ng-app="desappGroupABackendApp">
@@ -126,11 +125,14 @@
     <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/services/login.js" charset="utf-8"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/routes.js"></script>
