@@ -13,7 +13,7 @@ angular.module('desappGroupABackendApp')
     $window,
     loginService,
     localStorageService) {
-    const googleSigin = document.querySelector('google-signin');
+    var googleSigin = document.querySelector('google-signin');
     googleSigin.addEventListener("google-signin-offline-success", function(
       auth) {
       loginService.googleLogin(auth.detail.code)
