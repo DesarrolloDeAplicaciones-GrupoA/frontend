@@ -6,7 +6,7 @@ angular.module("desappGroupABackendApp")
       googleLogin: function(code) {
         return $http({
           method: "post",
-          url: ENV.apiEndpoint + "/oauth/google",
+          url: ENV.apiEndpoint + "oauth/google",
           data: {
             authorizationCode: code
           }
