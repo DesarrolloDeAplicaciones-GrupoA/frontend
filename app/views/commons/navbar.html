@@ -2,7 +2,7 @@
   <ul class="nav navbar-nav navbar-right">
     <li><a class="language-button" ng-click="changeLanguage('es')" translate="BUTTON_TEXT_ES"></a></li>
     <li><a class="language-button" ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN"></a></li>
-    <li class="active"><a href="/#/">Home</a></li>
+    <li><a ng-href="/#/about" ng-href="/#/about">About</a></li>
     <li ng-hide="authService.isLoggedIn()"><a ng-href="/#/login">Login</a></li>
     <li ng-show="authService.isLoggedIn()"><a ng-click="logout()" ng-href="/#/logout">Logout</a></li>
   </ul>
