@@ -21,13 +21,18 @@ angular
     'config',
     'pascalprecht.translate'
   ])
-  .config(function($translateProvider) {
-    $translateProvider.translations('es', {
-      PAGETITLE: "Let's go, come with me if you wanna live"
-    });
+  .config(function ($translateProvider) {
+    $translateProvider.translations('en', {
+      PAGETITLE: "Let's go, come with me if you wanna live.",
+      TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people."
+    })
+      .translations('es', {
+        PAGETITLE: '¡Subi que te llevo!',
+        TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas."
+      });
     $translateProvider.preferredLanguage('es');
   })
-  .config(function($routeProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -57,10 +62,10 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }).config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-      key: '', // Ask for this!
-      v: '3.23', //defaults to latest 3.X anyhow
-      libraries: 'weather,geometry,visualization'
-    });
+  }).config(function (uiGmapGoogleMapApiProvider) {
+  uiGmapGoogleMapApiProvider.configure({
+    key: '', // Ask for this!
+    v: '3.23', //defaults to latest 3.X anyhow
+    libraries: 'weather,geometry,visualization'
   });
+});
