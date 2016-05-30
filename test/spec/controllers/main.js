@@ -23,7 +23,7 @@ describe('Controller: MainCtrl', function() {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function() {
-    expect(MainCtrl.isLoggedIn).toBe(true);
+  it('should not be logged in', function() {
+    expect(scope.isLoggedIn).toBe(false);
   });
 });

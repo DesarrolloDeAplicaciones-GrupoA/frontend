@@ -6,22 +6,30 @@ describe('Controller: VehicleCtrl', function() {
   beforeEach(module('desappGroupABackendApp'));
 
   var VehicleCtrl,
+    VehicleService,
+    $window,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
-    VehicleCtrl = $controller('VehicleCtrl', {
-      $scope: scope
+    $window = {location: {assign: function(path) {}}};
+    VehicleService = {save: function(vehicle){
+      return {then: function(cb, err){}}
+    }};
+    VehicleCtrl = $controller('NewVehicleCtrl', {
+      $scope: scope,
+      VehicleService: VehicleService,
+      $window: $window
         // place here mocked dependencies
     });
   }));
 
   it('should have a new vehicle without brand', function() {
-    expect(VehicleCtrl.newVehicle.brand).toBe("");
+    expect(scope.newVehicle.brand).toBe("");
   });
 
   it('should have a new vehicle capacity 1', function() {
-    expect(VehicleCtrl.newVehicle.capacity).toBe(1);
+    expect(scope.newVehicle.capacity).toBe(2);
   });
 });
