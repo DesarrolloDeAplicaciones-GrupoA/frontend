@@ -32,67 +32,11 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </button>
 
                 <a class="navbar-brand" href="#/">Subí que te llevo</a>
             </div>
-
-            <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#/">Home</a></li>
-                    <li><a ng-href="#/routes">Rutas</a></li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
-                                    <span class="glyphicon glyphicon-list-alt"></span> About the project
-                                </a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA">
-                                    <span class="glyphicon glyphicon-heart"></span> from the A-team
-                                </a>
-                            </li>
-                            <li role="separator" class="divider"></li>
-                            <li>
-                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA/backend">
-                                    <span class="glyphicon glyphicon-sort"></span> See backend on Gihub</a>
-                            </li>
-                            <li>
-                                <a href="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/backend"><img src="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/backend.svg?branch=master"
-                                    /></a>
-                            </li>
-                            <li>
-                                <a href="https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/backend"><img src="https://api.codacy.com/project/badge/grade/2709341668804273a8cdc71cee06e1c5" /></a>
-                            </li>
-                            <li>
-                                <a href="https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/backend"><img src="https://api.codacy.com/project/badge/coverage/2709341668804273a8cdc71cee06e1c5" /></a>
-                            </li>
-                            <li role="separator" class="divider"></li>
-                            <li>
-                                <a class="footer-link" href="https://github.com/DesarrolloDeAplicaciones-GrupoA/frontend">
-                                    <span class="glyphicon glyphicon-sort"></span> See frontend on Gihub</a>
-                            </li>
-                            <li>
-                              <a href="http://subi-que-te-llevo.herokuapp.com/#/">
-                                <img src="https://heroku-badge.herokuapp.com/?app=subi-que-te-llevo" alt="heroku" />
-                              </a>
-                            </li>
-                            <li>
-                                <a href="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend"><img src="https://travis-ci.org/DesarrolloDeAplicaciones-GrupoA/frontend.svg?branch=master"
-                                    /></a>
-                            </li>
-                            <li>
-                                <a href="https://www.codacy.com/app/DesarrolloDeAplicaciones-GrupoA/frontned"><img src="https://api.codacy.com/project/badge/grade/8a09263b6ab241b8bf071acb80a35597" /></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <navbar></navbar>
         </div>
     </div>
 
@@ -140,6 +84,8 @@
     <script src="scripts/controllers/routes.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/vehicle.js"></script>
+    <script src="scripts/controllers/navbar.js"></script>
+    <script src="scripts/directives/navbar.js"></script>
     <script src="scripts/config.js" />
     <!-- endbuild -->
 </body>

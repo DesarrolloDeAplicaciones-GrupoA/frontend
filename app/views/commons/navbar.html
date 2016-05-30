@@ -1,0 +1,7 @@
+<div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/#/">Home</a></li>
+        <li ng-hide="authService.isLoggedIn()"><a ng-href="/#/login">Login</a></li>
+        <li ng-show="authService.isLoggedIn()"><a ng-click="logout()" ng-href="/#/logout">Logout</a></li>
+    </ul>
+</div>

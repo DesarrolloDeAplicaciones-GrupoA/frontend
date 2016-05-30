@@ -15,7 +15,7 @@ angular.module('desappGroupABackendApp')
     };
     $scope.save = function(vehicle) {
       VehicleService.save(vehicle).then(function(response) {
-          console.log("created", response.data);
+          console.log('created', response.data);
         },
         function(error) {
           console.log(error);
