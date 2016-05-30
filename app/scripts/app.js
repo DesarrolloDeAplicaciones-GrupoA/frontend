@@ -84,6 +84,11 @@ angular
         controller: 'NewVehicleCtrl',
         controllerAs: 'newVehicleCtrl'
       })
+      .when('/travels/new', {
+        templateUrl: 'views/travels/new.html',
+        controller: 'NewTravelsCtrl',
+        controllerAs: 'newTravelsCtrl'
+      })
       .when('/vehicles/:id', {
         templateUrl: 'views/vehicles/show.html',
         controller: 'ShowVehicleCtrl',
