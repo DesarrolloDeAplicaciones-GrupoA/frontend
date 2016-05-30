@@ -24,11 +24,15 @@ angular
   .config(function ($translateProvider) {
     $translateProvider.translations('en', {
       PAGETITLE: "Let's go, come with me if you wanna live.",
-      TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people."
+      TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
+      BUTTON_TEXT_EN: "english",
+      BUTTON_TEXT_ES: "español"
     })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
-        TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas."
+        TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas.",
+        BUTTON_TEXT_EN: "english",
+        BUTTON_TEXT_ES: "español"
       });
     $translateProvider.preferredLanguage('es');
   })

@@ -8,9 +8,12 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('NavbarCtrl', function($scope, AuthService) {
+  .controller('NavbarCtrl', function ($scope, AuthService, $translate) {
     $scope.authService = AuthService;
-    $scope.logout = function() {
+    $scope.logout = function () {
       $scope.authService.logout();
+    };
+    $scope.changeLanguage = function (langKey) {
+      $translate.use(langKey);
     };
   });
