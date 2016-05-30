@@ -27,7 +27,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when("/products", {
+      .when('/products', {
         templateUrl: 'views/products.html',
         controller: 'ProductsCtrl',
         controllerAs: 'products'
@@ -46,6 +46,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/vehicles/new', {
+        templateUrl: 'views/vehicles/new.html',
+        controller: 'NewVehicleCtrl',
+        controllerAs: 'newVehicleCtrl'
       })
       .otherwise({
         redirectTo: '/'
