@@ -9,7 +9,7 @@
 <div class="row marketing text-center">
     <div class="list-group">
         <a href="/#/routes" class="list-group-item"><span class="glyphicon glyphicon-search"></span> Buscar recorrido donde subir</a>
-        <a href="/#/login" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Inciar sesion para sumar a un recorrido</a>
-        <a href="/#/routes/new" class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> Agregar un recorrido nuevo</a>
+        <a ng-hide="isLoggedIn" href="/#/login" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Inciar sesion para sumar a un recorrido</a>
+        <a ng-show="isLoggedIn" href="/#/vehicles/new" class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> Agregar un vehiculo nuevo</a>
     </div>
 </div>
