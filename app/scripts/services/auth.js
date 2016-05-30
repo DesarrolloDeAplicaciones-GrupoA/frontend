@@ -1,15 +1,19 @@
-'use strict'
+'use strict';
 
-angular.module("desappGroupABackendApp")
-  .factory("AuthService", function(localStorageService) {
+angular.module('desappGroupABackendApp')
+  .factory('AuthService', function(localStorageService) {
     return {
 
       getTokenKey: function() {
-        return "accessToken";
+        return 'accessToken';
+      },
+
+      getToken: function() {
+        return localStorageService.get(this.getTokenKey());
       },
 
       isLoggedIn: function() {
-        return !!localStorageService.get(this.getTokenKey());
+        return !!this.getToken();
       },
 
       login: function(token) {
@@ -19,5 +23,5 @@ angular.module("desappGroupABackendApp")
       logout: function() {
         return localStorageService.remove(this.getTokenKey());
       }
-    }
+    };
   });
