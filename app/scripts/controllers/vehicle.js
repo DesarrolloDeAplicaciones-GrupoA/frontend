@@ -8,14 +8,14 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('NewVehicleCtrl', function($scope, VehicleService) {
+  .controller('NewVehicleCtrl', function($scope, VehicleService, $window) {
     $scope.newVehicle = {
       brand: '',
       capacity: 2
     };
     $scope.save = function(vehicle) {
       VehicleService.save(vehicle).then(function(response) {
-          console.log('created', response.data);
+          $window.location.assign('/#/vehicles/' + response.data.id);
         },
         function(error) {
           console.log(error);
