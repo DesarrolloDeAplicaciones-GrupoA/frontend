@@ -18,8 +18,15 @@ angular
     'ngTouch',
     'uiGmapgoogle-maps',
     'LocalStorageModule',
-    'config'
+    'config',
+    'pascalprecht.translate'
   ])
+  .config(function($translateProvider) {
+    $translateProvider.translations('es', {
+      PAGETITLE: "Let's go, come with me if you wanna live"
+    });
+    $translateProvider.preferredLanguage('es');
+  })
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
