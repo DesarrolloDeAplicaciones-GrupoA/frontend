@@ -10,6 +10,8 @@
 module.exports = function(grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
+  grunt.loadNpmTasks('grunt-ng-constant');
+
   require('time-grunt')(grunt);
 
   // Automatically load required Grunt tasks
@@ -30,6 +32,40 @@ module.exports = function(grunt) {
 
     // Project settings
     yeoman: appConfig,
+
+    ngconstant: {
+      // Options for all targets
+      options: {
+        space: '',
+        wrap: '"use strict";\n\n {\%= __ngModule %}',
+        name: 'config',
+      },
+      // Environment targets
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },
+        constants: {
+          ENV: {
+            name: 'development',
+            apiEndpoint: 'http://localhost:8080/rest/'
+          }
+        }
+      },
+      production: {
+        options: {
+          dest: '<%= yeoman.dist %>/scripts/config.js'
+        },
+        constants: {
+          ENV: {
+            name: 'production',
+            apiEndpoint: 'http://subi-que-te-llevo.herokuapp.com/rest/'
+          }
+        }
+      }
+    },
+
+
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -491,6 +527,7 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development', // ADD THIS
       'wiredep',
       'concurrent:server',
       'postcss:server',
@@ -515,6 +552,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:production', // ADD THIS
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
