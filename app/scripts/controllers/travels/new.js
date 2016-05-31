@@ -10,6 +10,7 @@
 angular.module('desappGroupABackendApp')
   .controller('NewTravelsCtrl', function($scope, TravelService, $window) {
     $scope.newTravel = {
+      nameTravel: "",
       fuel: 0,
       toll: 0,
       route: {},
