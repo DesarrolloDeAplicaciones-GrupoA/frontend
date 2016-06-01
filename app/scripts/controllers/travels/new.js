@@ -8,7 +8,7 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('NewTravelsCtrl', function($scope, TravelService, $window) {
+  .controller('NewTravelCtrl', function($scope, TravelService, $window) {
     $scope.newTravel = {
       nameTravel: "",
       fuel: 0,
