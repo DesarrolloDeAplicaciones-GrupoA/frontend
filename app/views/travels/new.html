@@ -12,15 +12,39 @@
     <div class="form-group">
       <label for="fuel" class="col-sm-2 control-label">Fuel</label>
       <div class="col-sm-10">
-        <input value="0" required integer ng-model="newVehicle.capacity" type="number" class="form-control"
+        <input value="0" required integer ng-model="newTravel.fuel" type="number" class="form-control"
                id="fuel">
       </div>
     </div>
     <div class="form-group">
       <label for="toll" class="col-sm-2 control-label">Toll</label>
       <div class="col-sm-10">
-        <input value="0" required integer ng-model="newVehicle.capacity" type="number" class="form-control"
+        <input value="0" required integer ng-model="newTravel.toll" type="number" class="form-control"
                id="toll">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nameTravel" class="col-sm-2 control-label">Route</label>
+      <div class="col-sm-10">
+        <input value="" required minlength="3" ng-model="newTravel.route" type="text" class="form-control"
+               id="route"
+               placeholder="route name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nameTravel" class="col-sm-2 control-label">Range Hours</label>
+      <div class="col-sm-10">
+        <input value="" required minlength="3" ng-model="newTravel.rangeHours" type="text" class="form-control"
+               id="rangeHours"
+               placeholder="Travel name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nameTravel" class="col-sm-2 control-label">Frequency</label>
+      <div class="col-sm-10">
+        <input value="" required minlength="3" ng-model="newTravel.frequency" type="text" class="form-control"
+               id="frequency"
+               placeholder="frequency">
       </div>
     </div>
     <div class="form-group">
