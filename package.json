@@ -47,5 +47,9 @@
     "postinstall": "bower install && grunt build",
     "start": "node server/app.js",
     "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "^1.0.1",
+    "moment": "^2.13.0"
   }
 }

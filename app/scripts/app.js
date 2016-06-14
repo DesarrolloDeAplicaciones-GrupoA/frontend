@@ -19,7 +19,8 @@ angular
     'uiGmapgoogle-maps',
     'LocalStorageModule',
     'config',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ui.bootstrap.datetimepicker'
   ])
   .config(function ($translateProvider) {
     $translateProvider.translations('en', {

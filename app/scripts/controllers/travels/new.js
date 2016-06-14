@@ -13,9 +13,10 @@ angular.module('desappGroupABackendApp')
       nameTravel: "",
       fuel: 0,
       toll: 0,
-      route: {},
-      rangeHours: {},
-      frequency: []
+      route: "",
+      inicio: 0,
+      fin: 0,
+      frequency: 0,
     };
     $scope.save = function(travel) {
       TravelService.save(travel).then(function(response) {
