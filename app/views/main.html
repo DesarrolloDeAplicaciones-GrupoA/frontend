@@ -9,7 +9,9 @@
 <div class="row marketing text-center">
     <div class="list-group">
         <a href="/#/routes" class="list-group-item"><span class="glyphicon glyphicon-search"></span> {{'LOOK_UP_TRIP' | translate}}</a>
-        <a ng-hide="isLoggedIn" href="/#/login" class="list-group-item"><span class="glyphicon glyphicon-user"></span> {{'LOGIN_FOR_SUM' | translate}}</a>
+        <a href="/#/products" class="list-group-item"><span class="glyphicon glyphicon-search"></span> {{'SEE_PRODUCTS' | translate}}</a>
+      <a ng-hide="isLoggedIn" href="/#/login" class="list-group-item"><span class="glyphicon glyphicon-user"></span> {{'LOGIN_FOR_SUM' | translate}}</a>
         <a ng-show="isLoggedIn" href="/#/vehicles/new" class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> {{'ADD_VEHICLE' | translate}}</a>
+      <a ng-show="isLoggedIn" href="/#/products/new" class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> {{'ADD_PRODUCT' | translate}}</a>
     </div>
 </div>

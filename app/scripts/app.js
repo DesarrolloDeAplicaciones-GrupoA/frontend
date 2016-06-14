@@ -28,6 +28,8 @@ angular
       LOOK_UP_TRIP: "Look up trip to get up",
       LOGIN_FOR_SUM: "login for summing in trip",
       ADD_VEHICLE: "Add new vehicle",
+      ADD_PRODUCT: "Add new product",
+      SEE_PRODUCTS: "See products",
       SEARCH_ROUTE: "Search routes",
       WRITE_A_PLACE: "Write a place please...",
       SEARCH: "Search!",
@@ -42,6 +44,8 @@ angular
         LOOK_UP_TRIP: "Buscar recorrido donde subir",
         LOGIN_FOR_SUM: "Inciar sesion para sumar a un recorrido",
         ADD_VEHICLE: "Agregar un vehiculo nuevo",
+        ADD_PRODUCT: "Agregar un producto nuevo",
+        SEE_PRODUCTS: "Ver productos",
         SEARCH_ROUTE: "Buscar rutas",
         WRITE_A_PLACE: "Escribe un lugar...",
         SEARCH: "Buscar!",
@@ -58,11 +62,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-      })
-      .when('/products', {
-        templateUrl: 'views/products.html',
-        controller: 'ProductsCtrl',
-        controllerAs: 'products'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -99,6 +98,21 @@ angular
         controller: 'ShowVehicleCtrl',
         controllerAs: 'showVehicleCtrl'
       })
+      .when('/products/new', {
+        templateUrl: 'views/products/new.html',
+        controller: 'NewProductsCtrl',
+        controllerAs: 'newProductsCtrl'
+            })
+      .when('/products', {
+        templateUrl: 'views/products/all.html',
+        controller: 'ProductsCtrl',
+        controllerAs: 'productsCtrl'
+        })
+       .when('/products/:id', {
+        templateUrl: 'views/products/show.html',
+        controller: 'ShowProductCtrl',
+        controllerAs: 'showProductCtrl'
+              })
       .otherwise({
         redirectTo: '/'
       });
