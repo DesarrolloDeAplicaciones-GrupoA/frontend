@@ -16,9 +16,12 @@ angular.module('desappGroupABackendApp')
       route: "",
       inicio: 0,
       fin: 0,
-      frequency: 0,
     };
     $scope.save = function(travel) {
+
+      travel.inicio = Date.parse(travel.inicio);
+      travel.fin = Date.parse(travel.fin);
+
       TravelService.save(travel).then(function(response) {
           $window.location.assign('/#/travels/' + response.data.id);
         },
