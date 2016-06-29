@@ -1,0 +1,22 @@
+<div class="well">
+  <h2 class="text-center">{{'MESSAGES' | translate}}</h2>
+  <p>{{'PUBLIC_MESSAGES' | translate}}</p>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>{{'MESSAGE' | translate}}</th>
+      <th>{{'MESSAGE_SENDER' | translate}}</th>
+      <th>{{'MESSAGE_SUBJECT' | translate}}</th>
+      <th>{{'DATE' | translate}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="x in messages | orderBy: date">
+      <td><a ng-href="/#/messages/"+x.id> </a><span class="glyphicon glyphicon-envelope"></span></td>
+      <td>{{ x.sender }}</td>
+      <td>{{ x.subject }}</td>
+      <td>{{ x.dt }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
