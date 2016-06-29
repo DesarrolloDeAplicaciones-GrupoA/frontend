@@ -37,6 +37,12 @@
     </div>
 
     <div class="form-group">
+      <label ng-repeat="day in days">
+        <input type="checkbox" checklist-model="newTravel.frequency" checklist-value="day.id"> {{day.text}}
+      </label>
+    </div>
+
+    <div class="form-group">
       <label for="nameTravel" class="col-sm-2 control-label">Inicio</label>
       <div class="dropdown">
         <a class="dropdown-toggle my-toggle-select" id="inicio" role="button" data-toggle="dropdown" data-target="#"
