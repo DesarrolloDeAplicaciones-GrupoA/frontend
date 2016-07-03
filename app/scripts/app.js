@@ -20,7 +20,8 @@ angular
     'LocalStorageModule',
     'config',
     'pascalprecht.translate',
-    'ui.bootstrap.datetimepicker'
+    'ui.bootstrap.datetimepicker',
+    'checklist-model'
   ])
   .config(function ($translateProvider) {
     $translateProvider.translations('en', {
