@@ -2,27 +2,35 @@
     <h2 class="text-center">{{'NEW_MESSAGE' | translate}}</h2>
       <form novalidate class="form-horizontal">
       <div class="form-group">
-        <label for="sender" class="col-sm-2 control-label">{{'PRODUCT_NAME' | translate}}</label>
+        <label for="sender" class="col-sm-2 control-label">{{'NO VA ESTE CANPO' | translate}}</label>
           <div class="col-sm-10">
-            <input value="" required minlength="3" ng-model="newMessage.sender" type="text" class="form-control" id="sender" placeholder="Message">
+            <input value="" required minlength="3" ng-model="newMessage.sender" type="text" class="form-control" id="sender">
           </div>
         </div>
         <div class="form-group">
-          <label for="receiver" class="col-sm-2 control-label">Stock</label>
+          <label for="receiver" class="col-sm-2 control-label">{{'MESSAGE_RECEIVER' | translate}}</label>
           <div class="col-sm-10">
             <input value="" min="1" required integer ng-model="newMessage.receiver" type="number" class="form-control" id="receiver">
           </div>
         </div>
         <div class="form-group">
-          <label for="subject" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
+          <label for="subject" class="col-sm-2 control-label">{{'MESSAGE_SUBJECT' | translate}}</label>
           <div class="col-sm-10">
-            <input value="" min="1000" required integer ng-model="newMessage.subject" type="number" class="form-control" id="subject">
+            <input value="" minlength="3"  required integer ng-model="newMessage.subject" type="text" class="form-control" id="subject" placeholder="Asunto">
           </div>
         </div>
         <div class="form-group">
-          <label for="messageText" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
+          <label for="isPublic" class="col-sm-2 control-label">{{'MESSAGE_PUBLIC' | translate}}</label>
           <div class="col-sm-10">
-            <input value="" min="1000" required integer ng-model="newMessage.messageText" type="number" class="form-control" id="messageText">
+            <div class="checkbox">
+              <label><input required integer ng-model="newMessage.isPublic"  type="checkbox" value="" id="isPublic"></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messageText" class="col-sm-2 control-label">{{'MESSAGE_TEXTO' | translate}}</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="6" required integer ng-model="newMessage.messageText"id="messageText" placeholder="Cuerpo"></textarea>
           </div>
         </div>
         <div class="form-group">
