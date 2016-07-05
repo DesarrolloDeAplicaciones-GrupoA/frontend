@@ -14,7 +14,7 @@ angular.module('desappGroupABackendApp')
       sender: "",
       subject: "",
       messageText: "",
-      isPublic: false,
+      isPublic: "",
     };
     $scope.save = function(message) {
       MessageService.save(message).then(function(response) {

@@ -12,14 +12,14 @@ angular.module('desappGroupABackendApp')
       get: function(id) {
         return $http({
           method: 'get',
-          url: ENV.apiEndpoint + 'message/' + id
+          url: ENV.apiEndpoint + 'messages/' + id
         });
       },
       save: function(newMessage) {
         return $http({
           method: 'post',
           //dataType: 'json',
-          url: ENV.apiEndpoint + 'message/new',
+          url: ENV.apiEndpoint + 'messages/new',
      /* params: {
             token: AuthService.getToken()          },*/
           data: newMessage

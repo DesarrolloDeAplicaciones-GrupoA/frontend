@@ -1,0 +1,35 @@
+<div class="well">
+    <h2 class="text-center">{{'NEW_MESSAGE' | translate}}</h2>
+      <form novalidate class="form-horizontal">
+      <div class="form-group">
+        <label for="sender" class="col-sm-2 control-label">{{'PRODUCT_NAME' | translate}}</label>
+          <div class="col-sm-10">
+            <input value="" required minlength="3" ng-model="newMessage.sender" type="text" class="form-control" id="sender" placeholder="Message">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="receiver" class="col-sm-2 control-label">Stock</label>
+          <div class="col-sm-10">
+            <input value="" min="1" required integer ng-model="newMessage.receiver" type="number" class="form-control" id="receiver">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
+          <div class="col-sm-10">
+            <input value="" min="1000" required integer ng-model="newMessage.subject" type="number" class="form-control" id="subject">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messageText" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
+          <div class="col-sm-10">
+            <input value="" min="1000" required integer ng-model="newMessage.messageText" type="number" class="form-control" id="messageText">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" ng-click="save(newMessage)" class="btn btn-success">{{'CREATE' | translate}}</button>
+            <button class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </form>
+</div>

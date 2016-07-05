@@ -144,17 +144,16 @@ angular
         controller: 'InboxCtrl',
         controllerAs: 'inboxCtrl'
               })
+        .when('/messages/new', {
+        templateUrl: 'views/messages/new.html',
+        controller: 'NewMessageCtrl',
+        controllerAs: 'newMessageCtrl'
+                          })
         .when('/messages/:id', {
         templateUrl: 'views/messages/show.html',
         controller: 'ShowMessageCtrl',
         controllerAs: 'showMessageCtrl'
               })
-
-/*        .when('/messages/new', {
-        templateUrl: 'views/messages/new.html',
-        controller: 'NewMessageCtrl',
-        controllerAs: 'newMessageCtrl'
-            })*/
       .otherwise({
         redirectTo: '/'
       });
