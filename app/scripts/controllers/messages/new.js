@@ -10,9 +10,11 @@
 angular.module('desappGroupABackendApp')
     .controller('NewMessageCtrl', function($scope, MessageService, $window) {
     $scope.newMessage = {
-      name: "",
-      stock: 0,
-      pointCost: 0,
+      receiver: "",
+      sender: "",
+      subject: "",
+      messageText: "",
+      isPublic: false,
     };
     $scope.save = function(message) {
       MessageService.save(message).then(function(response) {

@@ -139,17 +139,17 @@ angular
         controller: 'ShowProductCtrl',
         controllerAs: 'showProductCtrl'
               })
-/*      .when('/messages/:id', {
+        .when('/messages/inbox', {
+        templateUrl: 'views/messages/inbox.html',
+        controller: 'InboxCtrl',
+        controllerAs: 'inboxCtrl'
+              })
+        .when('/messages/:id', {
         templateUrl: 'views/messages/show.html',
         controller: 'ShowMessageCtrl',
         controllerAs: 'showMessageCtrl'
               })
-*/
-       .when('/messages/inbox', {
-        templateUrl: 'views/messages/inbox.html',
-        controller: 'InboxCtrl',
-        controllerAs: 'inboxCtrl'
-               })
+
 /*        .when('/messages/new', {
         templateUrl: 'views/messages/new.html',
         controller: 'NewMessageCtrl',
