@@ -23,28 +23,28 @@ angular
     'ui.bootstrap.datetimepicker',
     'checklist-model'
   ])
-  .config(function ($translateProvider) {
+  .config(function($translateProvider) {
     $translateProvider.translations('en', {
-      PAGETITLE: "Let's go, come with me if you wanna live.",
-      TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
-      LOOK_UP_TRIP: "Look up trip to get up",
-      LOGIN_FOR_SUM: "Login for summing in trip",
-      ADD_VEHICLE: "Add new vehicle",
-      ADD_PRODUCT: "Add new product",
-      PRODUCTS: "Products",
-      PRODUCT_NAME: "Name Product",
-      POINT_COST: "Point Cost",
-      SEE_PRODUCTS: "See products",
-      TEXT_ALL_PRODUCTS: "This are all products in the app",
-      SEARCH_ROUTE: "Search routes",
-      WRITE_A_PLACE: "Write a place please...",
-      SEARCH: "Search!",
-      RESET: "Reset",
-      CREATE: "Create",
-      RESULTS: "Results",
-      BUTTON_TEXT_EN: "english",
-      BUTTON_TEXT_ES: "spanish"
-    })
+        PAGETITLE: "Let's go, come with me if you wanna live.",
+        TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
+        LOOK_UP_TRIP: "Look up trip to get up",
+        LOGIN_FOR_SUM: "Login for summing in trip",
+        ADD_VEHICLE: "Add new vehicle",
+        ADD_PRODUCT: "Add new product",
+        PRODUCTS: "Products",
+        PRODUCT_NAME: "Name Product",
+        POINT_COST: "Point Cost",
+        SEE_PRODUCTS: "See products",
+        TEXT_ALL_PRODUCTS: "This are all products in the app",
+        SEARCH_ROUTE: "Search routes",
+        WRITE_A_PLACE: "Write a place please...",
+        SEARCH: "Search!",
+        RESET: "Reset",
+        CREATE: "Create",
+        RESULTS: "Results",
+        BUTTON_TEXT_EN: "english",
+        BUTTON_TEXT_ES: "spanish"
+      })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
         TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas.",
@@ -68,7 +68,7 @@ angular
       });
     $translateProvider.preferredLanguage('es');
   })
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -81,7 +81,7 @@ angular
         controllerAs: 'login'
       })
       .when('/routes', {
-        templateUrl: 'views/routes.html',
+        templateUrl: 'views/routes/index.html',
         controller: 'RoutesCtrl',
         controllerAs: 'routes'
       })
@@ -114,24 +114,24 @@ angular
         templateUrl: 'views/products/new.html',
         controller: 'NewProductsCtrl',
         controllerAs: 'newProductsCtrl'
-            })
+      })
       .when('/products', {
         templateUrl: 'views/products/all.html',
         controller: 'ProductsCtrl',
         controllerAs: 'productsCtrl'
-        })
-       .when('/products/:id', {
+      })
+      .when('/products/:id', {
         templateUrl: 'views/products/show.html',
         controller: 'ShowProductCtrl',
         controllerAs: 'showProductCtrl'
-              })
+      })
       .otherwise({
         redirectTo: '/'
       });
-  }).config(function (uiGmapGoogleMapApiProvider) {
-  uiGmapGoogleMapApiProvider.configure({
-    key: '', // Ask for this!
-    v: '3.23', //defaults to latest 3.X anyhow
-    libraries: 'weather,geometry,visualization'
+  }).config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      key: '', // Ask for this!
+      v: '3.23', //defaults to latest 3.X anyhow
+      libraries: 'weather,geometry,visualization'
+    });
   });
-});
