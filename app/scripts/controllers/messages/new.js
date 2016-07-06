@@ -11,11 +11,12 @@ angular.module('desappGroupABackendApp')
     .controller('NewMessageCtrl', function($scope, MessageService, $window) {
     $scope.newMessage = {
       receiver: "",
-      sender: "",
+      sender: 1,//id prefijado hay que ver como le pido el id al usuario logeado
       subject: "",
       messageText: "",
-      isPublic: "",
+      isPublic: true,
     };
+
     $scope.save = function(message) {
       MessageService.save(message).then(function(response) {
           $window.location.assign('/#/messages/' + response.data.id);
@@ -24,5 +25,12 @@ angular.module('desappGroupABackendApp')
           console.log(error);
         });
     };
+     //$scope.allUsers=["pepe","juan","lopez"];
+        $scope.allUsers=[];
+     MessageService.getAllUsers().then(function(response) {
+                        $scope.allUsers = response.data;
+                            },function(error) {
+                                      console.log(error);
+                                    });
 
   });

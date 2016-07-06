@@ -22,8 +22,7 @@ angular
     'pascalprecht.translate',
     'ui.bootstrap.datetimepicker',
     'checklist-model'
-  ])
-  .config(function ($translateProvider) {
+  ]).config(function ($translateProvider) {
     $translateProvider.translations('en', {
       PAGETITLE: "Let's go, come with me if you wanna live.",
       TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
@@ -144,6 +143,11 @@ angular
         controller: 'InboxCtrl',
         controllerAs: 'inboxCtrl'
               })
+        .when('/messages/outbox', {
+        templateUrl: 'views/messages/outbox.html',
+                controller: 'InboxCtrl',
+                controllerAs: 'inboxCtrl'
+                      })
         .when('/messages/new', {
         templateUrl: 'views/messages/new.html',
         controller: 'NewMessageCtrl',

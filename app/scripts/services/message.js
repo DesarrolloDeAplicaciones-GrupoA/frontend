@@ -22,14 +22,26 @@ angular.module('desappGroupABackendApp')
           url: ENV.apiEndpoint + 'messages/new',
      /* params: {
             token: AuthService.getToken()          },*/
-          data: newMessage
+          data: newMessage //angular.copy(newMessage);
         });
       },
-       getAllPublic: function() {
+       getInbox: function() {
               return $http({
                 method: 'get',
                 url: ENV.apiEndpoint + 'messages/inbox/'
               });
             },
+       getOutbox: function() {
+                     return $http({
+                       method: 'get',
+                       url: ENV.apiEndpoint + 'messages/outbox/'
+                     });
+                   },
+       getAllUsers: function() {
+                      return $http({
+                      method: 'get',
+                      url: ENV.apiEndpoint + 'userModels/listUsers/'
+                       });
+                 },
     };
   });
