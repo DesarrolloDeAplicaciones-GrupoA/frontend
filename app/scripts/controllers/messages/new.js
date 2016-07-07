@@ -14,10 +14,10 @@ angular.module('desappGroupABackendApp')
       sender: 1,//id prefijado hay que ver como le pido el id al usuario logeado
       subject: "",
       messageText: "",
-      isPublic: true,
+      isPublic: true
     };
 
-    $scope.save = function(message) {
+     $scope.save = function(message) {
       MessageService.save(message).then(function(response) {
           $window.location.assign('/#/messages/' + response.data.id);
         },
