@@ -8,10 +8,9 @@
  */
 
 angular.module('desappGroupABackendApp')
-    .controller('NewMessageCtrl', function($scope, MessageService, $window) {
+    .controller('NewMessageCtrl', function($scope, MessageService, UserService, $window) {
     $scope.newMessage = {
       receiver: "",
-      sender: 1,//id prefijado hay que ver como le pido el id al usuario logeado
       subject: "",
       messageText: "",
       isPublic: true
@@ -27,7 +26,7 @@ angular.module('desappGroupABackendApp')
     };
      //$scope.allUsers=["pepe","juan","lopez"];
         $scope.allUsers=[];
-     MessageService.getAllUsers().then(function(response) {
+     UserService.getAllUsers().then(function(response) {
                         $scope.allUsers = response.data;
                             },function(error) {
                                       console.log(error);

@@ -20,8 +20,8 @@ angular.module('desappGroupABackendApp')
           method: 'post',
           //dataType: 'json',
           url: ENV.apiEndpoint + 'messages/new',
-     /* params: {
-            token: AuthService.getToken()          },*/
+           params: {
+            token: AuthService.getToken()},
           data: newMessage //angular.copy(newMessage);
         });
       },
@@ -37,11 +37,5 @@ angular.module('desappGroupABackendApp')
                        url: ENV.apiEndpoint + 'messages/outbox/'
                      });
                    },
-       getAllUsers: function() {
-                      return $http({
-                      method: 'get',
-                      url: ENV.apiEndpoint + 'userModels/listUsers/'
-                       });
-                 },
     };
   });

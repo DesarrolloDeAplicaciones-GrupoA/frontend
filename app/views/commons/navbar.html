@@ -6,7 +6,7 @@
     <li ng-show="authService.isLoggedIn()" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown">
           <span class="glyphicon glyphicon-user"></span> 
-          <strong>Nombre</strong>
+          <strong>{{userInfo.fullName}}</strong>
           <span class="glyphicon glyphicon-chevron-down"></span>
         </a>
         <ul class="dropdown-menu">
@@ -19,10 +19,10 @@
                   </p>
                 </div>
                 <div class="col-lg-8">
-                  <p class="text-left"><strong>Nombre Apellido</strong></p>
-                  <p class="text-left small">correoElectronico@email.com</p>
+                  <p class="text-left"><strong>{{userInfo.fullName}}</strong></p>
+                  <p class="text-left small">{{userInfo.email}}</p>
                   <p class="text-left">
-                    <a href="/#/" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+                    <a href="/#/" class="btn btn-primary btn-block btn-sm">{{'USERS_INFO' | translate}}</a>
                   </p>
                 </div>
               </div>

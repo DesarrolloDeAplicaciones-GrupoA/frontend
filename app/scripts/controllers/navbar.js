@@ -8,7 +8,7 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('NavbarCtrl', function ($scope, AuthService, $translate) {
+  .controller('NavbarCtrl', function ($scope, AuthService, $translate, UserService) {
     $scope.authService = AuthService;
     $scope.logout = function () {
       $scope.authService.logout();
@@ -16,9 +16,11 @@ angular.module('desappGroupABackendApp')
     $scope.changeLanguage = function (langKey) {
       $translate.use(langKey);
     };
-    this.awesomeThings = [
-          'HTML5 Boilerplate',
-          'AngularJS',
-          'Karma'
-        ];
+    if(AuthService.isLoggedIn()){
+   UserService.getMyUserInfo().then(function(response) {
+                           $scope.userInfo = response.data;
+                               },function(error) {
+                                         console.log(error);
+                                       });
+                                       }
   });
