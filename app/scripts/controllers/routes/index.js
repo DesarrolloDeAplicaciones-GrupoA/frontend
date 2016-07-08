@@ -10,26 +10,31 @@
 angular.module('desappGroupABackendApp')
   .controller('RoutesCtrl', function($scope, RoutesService) {
 
-    var route = [{
-      id: 3,
-      latitude: -34.724959,
-      longitude: -58.260778
-    }, {
-      id: 1,
-      latitude: -34.7132642,
-      longitude: -58.2768611
-    }, {
-      id: 2,
-      latitude: -34.709613,
-      longitude: -58.280337
-    }];
+    var buildPaths = function(travels) {
+      var routes = [];
+      travels.forEach(function(travel) {
+        var route = travel.route;
+        travel.path = [route.start, route.end];
+      })
+      return travels;
+    }
+    var routes = [];
+    $scope.routes = routes;
 
     $scope.map = {
-      route: route,
+      route: routes,
       center: {
         latitude: -34.7132642,
         longitude: -58.2768611
       },
       zoom: 15
     };
+
+    RoutesService.all().then(function(response) {
+        $scope.routes = buildPaths(response.data);
+      },
+      function(error) {
+        console.log(error);
+      });
+
   });

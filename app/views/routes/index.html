@@ -16,11 +16,9 @@
         <div class="panel panel-success text-center">
             <div class="panel-heading">{{'RESULTS' | translate}}</div>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-info active">
-                Constitucion -> Obelisco
+                <a ng-repeat="travel in routes" href="#" class="list-group-item list-group-item-info">
+                {{travel.nameTravel}}
             </a>
-                <a href="#" class="list-group-item">Costitucion -> Retiro</a>
-                <a href="#" class="list-group-item">UNQ -> Luna Park</a>
             </div>
         </div>
     </div>
@@ -29,7 +27,7 @@
 <div class="row well">
     <div class="col-md-12">
         <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-polyline path='map.route'>
+            <ui-gmap-polyline ng-repeat="travel in routes" path="travel.path">
             </ui-gmap-polyline>
         </ui-gmap-google-map>
     </div>
