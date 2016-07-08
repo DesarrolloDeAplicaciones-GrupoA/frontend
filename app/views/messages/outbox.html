@@ -11,7 +11,7 @@
         <thead>
         <tr>
           <th>{{'MESSAGE' | translate}}</th>
-          <th>{{'MESSAGE_SENDER' | translate}}</th>
+          <th>{{'MESSAGE_RECEIVER' | translate}}</th>
           <th>{{'MESSAGE_SUBJECT' | translate}}</th>
           <th>{{'MESSAGE_PRIVACITY' | translate}}</th>
           <th>{{'DATE' | translate}}</th>
@@ -20,9 +20,10 @@
         <tbody>
         <tr ng-repeat="x in outbox | orderBy: date">
           <td><a style="cursor:pointer" href="/#/messages/{{ x.id }}" ><span class="glyphicon glyphicon-envelope"></span></a></td>
-          <td>{{ x.sender }}</td>
+          <td>{{ x.receiver }}</td>
           <td>{{ x.subject }}</td>
           <td>{{ x.isPublic }}</td>
+          <!--<td><i class="${{{ x.isPublic }}?.'glyphicon glyphicon-ok':'glyphicon glyphicon-remove'}" ></i></td>-->
           <td>{{ x.dt }}</td>
         </tr>
         </tbody>

@@ -25,16 +25,26 @@ angular.module('desappGroupABackendApp')
           data: newMessage //angular.copy(newMessage);
         });
       },
-       getInbox: function() {
+       getMyInbox: function() {
               return $http({
                 method: 'get',
-                url: ENV.apiEndpoint + 'messages/inbox/'
+                url: ENV.apiEndpoint + 'messages/inbox/',
+                params: {
+                            token: AuthService.getToken()},
               });
             },
-       getOutbox: function() {
+       getUserMessages: function(id) {
                      return $http({
                        method: 'get',
-                       url: ENV.apiEndpoint + 'messages/outbox/'
+                       url: ENV.apiEndpoint + 'messages/'+id,
+                     });
+                   },
+       getMyOutbox: function() {
+                     return $http({
+                       method: 'get',
+                       url: ENV.apiEndpoint + 'messages/outbox/',
+                       params: {
+                                   token: AuthService.getToken()},
                      });
                    },
     };

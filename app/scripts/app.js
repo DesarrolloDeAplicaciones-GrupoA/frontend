@@ -47,12 +47,15 @@ angular
     MESSAGE_SENDER: "Sender",
     MESSAGE_RECEIVER: "Receiver",
     MESSAGE_SUBJECT: "Subject",
+    MESSAGE_PRIVACITY: "Public Message",
     MESSAGES: "Messages",
     MESSAGE: "Message",
     DATE: "Date",
     ADD_TRAVEL: "Add new travel",
     Enter_an_origin_location: "Enter an origin location",
     Team_A: "Team of teams, A team, the team",
+    MESSAGE_INBOX: "INBOX",
+    MESSAGE_OUTBOX: "OUTBOX",
     About_this_site: "About this awsome site"
 
   })
@@ -78,6 +81,7 @@ angular
       BUTTON_TEXT_ES: "Español",
       PUBLIC_MESSAGES: "Mensajes Publicos",
       MESSAGE_SENDER: "Remitente",
+      MESSAGE_PRIVACITY: "Mensaje Publico",
       MESSAGE_RECEIVER: "Destinatario",
       MESSAGE_SUBJECT: "Asunto",
       MESSAGES: "Mensajes",
@@ -86,6 +90,8 @@ angular
       ADD_TRAVEL: "agregar un viaje nuevo",
       Enter_an_origin_location: "Seleccione direccion de origen",
       Team_A: "El equipo A-PlusPlus",
+      MESSAGE_INBOX: "Bandeja de Entrada",
+      MESSAGE_OUTBOX: "Bandeja de Salida",
       About_this_site: "Acerca del sitio"
     });
   $translateProvider.preferredLanguage('es');
