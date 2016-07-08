@@ -20,6 +20,17 @@ angular.module('desappGroupABackendApp')
     }
     var routes = [];
     $scope.routes = routes;
+    $scope.query = "";
+    $scope.search = function() {
+      RoutesService.search($scope.query).then(
+        function(response) {
+          $scope.routes = buildPaths(response.data);
+        },
+        function(error) {
+          console.log(error);
+        }
+      );
+    };
 
     $scope.map = {
       route: routes,

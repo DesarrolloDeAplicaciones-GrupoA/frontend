@@ -15,6 +15,12 @@ angular.module('desappGroupABackendApp')
           method: 'get',
           url: ENV.apiEndpoint + 'routes/all/'
         });
+      },
+      search: function(text) {
+        return $http({
+          method: 'get',
+          url: ENV.apiEndpoint + 'routes/search/?text=' + text
+        });
       }
     };
   });
