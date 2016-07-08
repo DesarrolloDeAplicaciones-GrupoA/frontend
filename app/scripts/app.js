@@ -136,36 +136,35 @@ angular
       .when('/products/:id', {
         templateUrl: 'views/products/show.html',
         controller: 'ShowProductCtrl',
-        controllerAs: 'showProductCtrl' << << << < HEAD
-      }) === === =
-  })
-  .when('/messages/inbox', {
-    templateUrl: 'views/messages/inbox.html',
-    controller: 'InboxCtrl',
-    controllerAs: 'inboxCtrl'
-  })
-  .when('/messages/outbox', {
-    templateUrl: 'views/messages/outbox.html',
-    controller: 'InboxCtrl',
-    controllerAs: 'inboxCtrl'
-  })
-  .when('/messages/new', {
-    templateUrl: 'views/messages/new.html',
-    controller: 'NewMessageCtrl',
-    controllerAs: 'newMessageCtrl'
-  })
-  .when('/messages/:id', {
-    templateUrl: 'views/messages/show.html',
-    controller: 'ShowMessageCtrl',
-    controllerAs: 'showMessageCtrl'
-  }) >>> >>> > be26d6a46a54dcc5045aa301c2b67b57102b8055
-  .otherwise({
-    redirectTo: '/'
+        controllerAs: 'showProductCtrl'
+      })
+      .when('/messages/inbox', {
+        templateUrl: 'views/messages/inbox.html',
+        controller: 'InboxCtrl',
+        controllerAs: 'inboxCtrl'
+      })
+      .when('/messages/outbox', {
+        templateUrl: 'views/messages/outbox.html',
+        controller: 'InboxCtrl',
+        controllerAs: 'inboxCtrl'
+      })
+      .when('/messages/new', {
+        templateUrl: 'views/messages/new.html',
+        controller: 'NewMessageCtrl',
+        controllerAs: 'newMessageCtrl'
+      })
+      .when('/messages/:id', {
+        templateUrl: 'views/messages/show.html',
+        controller: 'ShowMessageCtrl',
+        controllerAs: 'showMessageCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }).config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      key: '', // Ask for this!
+      v: '3.23', //defaults to latest 3.X anyhow
+      libraries: 'weather,geometry,visualization'
+    });
   });
-}).config(function(uiGmapGoogleMapApiProvider) {
-  uiGmapGoogleMapApiProvider.configure({
-    key: '', // Ask for this!
-    v: '3.23', //defaults to latest 3.X anyhow
-    libraries: 'weather,geometry,visualization'
-  });
-});
