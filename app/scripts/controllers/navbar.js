@@ -16,4 +16,9 @@ angular.module('desappGroupABackendApp')
     $scope.changeLanguage = function (langKey) {
       $translate.use(langKey);
     };
+    this.awesomeThings = [
+          'HTML5 Boilerplate',
+          'AngularJS',
+          'Karma'
+        ];
   });

@@ -22,8 +22,7 @@ angular
     'pascalprecht.translate',
     'ui.bootstrap.datetimepicker',
     'checklist-model'
-  ])
-  .config(function($translateProvider) {
+  ]).config(function($translateProvider) {
     $translateProvider.translations('en', {
         PAGETITLE: "Let's go, come with me if you wanna live.",
         TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
@@ -42,8 +41,15 @@ angular
         RESET: "Reset",
         CREATE: "Create",
         RESULTS: "Results",
-        BUTTON_TEXT_EN: "english",
-        BUTTON_TEXT_ES: "spanish"
+        BUTTON_TEXT_EN: "English",
+        BUTTON_TEXT_ES: "Spanish",
+        PUBLIC_MESSAGES: "Public Messages",
+        MESSAGE_SENDER: "Sender",
+        MESSAGE_RECEIVER: "Receiver",
+        MESSAGE_SUBJECT: "Subject",
+        MESSAGES: "Messages",
+        MESSAGE: "Message",
+        DATE: "Date"
       })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
@@ -63,8 +69,15 @@ angular
         RESET: "Reset",
         CREATE: "Crear",
         RESULTS: "Resultados",
-        BUTTON_TEXT_EN: "english",
-        BUTTON_TEXT_ES: "español"
+        BUTTON_TEXT_EN: "English",
+        BUTTON_TEXT_ES: "Español",
+        PUBLIC_MESSAGES: "Mensajes Publicos",
+        MESSAGE_SENDER: "Remitente",
+        MESSAGE_RECEIVER: "Destinatario",
+        MESSAGE_SUBJECT: "Asunto",
+        MESSAGES: "Mensajes",
+        MESSAGE: "Mensaje",
+        DATE: "Dia"
       });
     $translateProvider.preferredLanguage('es');
   })
@@ -123,15 +136,36 @@ angular
       .when('/products/:id', {
         templateUrl: 'views/products/show.html',
         controller: 'ShowProductCtrl',
-        controllerAs: 'showProductCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  }).config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-      key: '', // Ask for this!
-      v: '3.23', //defaults to latest 3.X anyhow
-      libraries: 'weather,geometry,visualization'
-    });
+        controllerAs: 'showProductCtrl' << << << < HEAD
+      }) === === =
+  })
+  .when('/messages/inbox', {
+    templateUrl: 'views/messages/inbox.html',
+    controller: 'InboxCtrl',
+    controllerAs: 'inboxCtrl'
+  })
+  .when('/messages/outbox', {
+    templateUrl: 'views/messages/outbox.html',
+    controller: 'InboxCtrl',
+    controllerAs: 'inboxCtrl'
+  })
+  .when('/messages/new', {
+    templateUrl: 'views/messages/new.html',
+    controller: 'NewMessageCtrl',
+    controllerAs: 'newMessageCtrl'
+  })
+  .when('/messages/:id', {
+    templateUrl: 'views/messages/show.html',
+    controller: 'ShowMessageCtrl',
+    controllerAs: 'showMessageCtrl'
+  }) >>> >>> > be26d6a46a54dcc5045aa301c2b67b57102b8055
+  .otherwise({
+    redirectTo: '/'
   });
+}).config(function(uiGmapGoogleMapApiProvider) {
+  uiGmapGoogleMapApiProvider.configure({
+    key: '', // Ask for this!
+    v: '3.23', //defaults to latest 3.X anyhow
+    libraries: 'weather,geometry,visualization'
+  });
+});
