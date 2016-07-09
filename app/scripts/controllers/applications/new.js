@@ -8,7 +8,7 @@
  */
 
 angular.module('desappGroupABackendApp')
-  .controller('NewApplicationCtrl', function($scope, TravelService, $window, $routeParams) {
+  .controller('NewApplicationCtrl', function($scope, TravelService, $window, $routeParams, ApplicationService) {
     $scope.newApplication = {
       upDate: new Date()
     };
@@ -37,7 +37,8 @@ angular.module('desappGroupABackendApp')
     $scope.dt = new Date();
 
     $scope.save = function(application) {
-      ApplicationService.save(application).then(function(response) {
+      application.upDate = $scope.dt;
+      ApplicationService.save($scope.travel, application).then(function(response) {
           $window.location.assign('/#/applications/mine/');
         },
         function(error) {
