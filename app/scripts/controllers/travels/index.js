@@ -8,8 +8,9 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('TravelsCtrl', function($scope, TravelService) {
+  .controller('TravelsCtrl', function($scope, TravelService, AuthService) {
 
+    $scope.authService = AuthService;
     var buildPaths = function(travels) {
       var routes = [];
       travels.forEach(function(travel) {

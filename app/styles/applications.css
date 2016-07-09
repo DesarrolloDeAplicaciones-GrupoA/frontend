@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+  .application-new .travel-description .dl-horizontal dt{
+    width: 80px;
+  }
+
+  .application-new .travel-description .dl-horizontal dd{
+    margin-left: 100px;
+  }
+
+}
