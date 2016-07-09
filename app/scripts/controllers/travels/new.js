@@ -8,28 +8,39 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('NewTravelCtrl', function ($scope, TravelService, $window) {
+  .controller('NewTravelCtrl', function ($scope, TravelService, PointService, $window) {
     $scope.newTravel = {
       nameTravel: "",
       fuel: 0,
       toll: 0,
-      route: "",
+      inicioLatitud: 0,
+      inicioLongitud: 0,
+      finLatitud: 0,
+      finLongitud: 0,
       inicio: "",
       fin: "",
       frequency: []
     };
+
     $scope.days = [
-        {id: 1, text: 'lunes'},
-        {id: 2, text: 'martes'},
-        {id: 3, text: 'miercoles'},
-        {id: 4, text: 'jueves'},
-        {id: 5, text: 'viernes'},
-        {id: 6, text: 'sabado'},
-        {id: 7, text: 'domingo'}
+      {id: 1, text: 'lunes'},
+      {id: 2, text: 'martes'},
+      {id: 3, text: 'miercoles'},
+      {id: 4, text: 'jueves'},
+      {id: 5, text: 'viernes'},
+      {id: 6, text: 'sabado'},
+      {id: 7, text: 'domingo'}
     ];
 
-    $scope.save = function (travel) {
+    $scope.allPoints = [];
 
+    PointService.all().then(function (response) {
+      $scope.allPoints = response.data;
+    }, function (error) {
+      console.log(error);
+    });
+
+    $scope.save = function (travel) {
       travel.inicio = Date.parse(travel.inicio);
       travel.fin = Date.parse(travel.fin);
 

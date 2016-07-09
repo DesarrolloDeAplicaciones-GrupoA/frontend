@@ -25,6 +25,7 @@ angular.module('desappGroupABackendApp')
           },
           data: newTravel
         });
+
       }
     };
   });
