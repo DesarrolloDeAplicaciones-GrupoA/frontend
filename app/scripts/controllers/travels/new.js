@@ -13,10 +13,8 @@ angular.module('desappGroupABackendApp')
       nameTravel: "",
       fuel: 0,
       toll: 0,
-      inicioLatitud: 0,
-      inicioLongitud: 0,
-      finLatitud: 0,
-      finLongitud: 0,
+      startPoint: {inicioLatitud: 0, inicioLongitud: 0},
+      endPoint: {finLatitud: 0, finLongitud: 0},
       inicio: "",
       fin: "",
       frequency: []

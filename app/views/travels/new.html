@@ -64,14 +64,10 @@
     </div>
 
     <div class="form-group">
-      <label for="nameTravel" class="col-sm-2 control-label">Route start point</label>
+      <label for="startPoint" class="col-sm-2 control-label">Route start point</label>
       <div class="col-sm-10">
-        <select class="selectpicker" data-live-search="true" data-size=5 ng-model="allPoints">
-          <option ng-repeat="p in allPoints" value="{{p.id}}">
-            Latitud: {{ p.latitude }}
-            Longitud: {{ p.longitude }}
-            <input type="hidden"/>
-          </option>
+        <select name="startPoint" id="startPoint" ng-model="newTravel.startPoint">
+          <option ng-repeat="option in allPoints" value="{{option}}">Latitud{{option.latitude}} Longitud{{option.longitude}}</option>
         </select>
       </div>
     </div>
@@ -79,12 +75,8 @@
     <div class="form-group">
       <label for="nameTravel" class="col-sm-2 control-label">Route end point</label>
       <div class="col-sm-10">
-        <select class="selectpicker" data-live-search="true" data-size=5 ng-model="allPoints">
-          <option ng-repeat="p in allPoints" value="{{p.id}}">
-            Latitud: {{ p.latitude }}
-            Longitud: {{ p.longitude }}
-            <input type="hidden"/>
-          </option>
+        <select name="endPoint" id="endPoint" ng-model="newTravel.endPoint">
+          <option ng-repeat="option in allPoints" value="{{option}}">Latitud{{option.latitude}} Longitud{{option.longitude}}</option>
         </select>
       </div>
     </div>
