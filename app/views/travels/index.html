@@ -16,7 +16,7 @@
         <div class="panel panel-success text-center">
             <div class="panel-heading">{{'RESULTS' | translate}}</div>
             <div class="list-group">
-                <a ng-repeat="travel in routes" href="#" class="list-group-item list-group-item-info">
+                <a ng-repeat="travel in travels" href="/#/travels/{{travel.id}}" class="list-group-item list-group-item-info">
                 {{travel.nameTravel}}
             </a>
             </div>
@@ -27,7 +27,7 @@
 <div class="row well">
     <div class="col-md-12">
         <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-polyline ng-repeat="travel in routes" path="travel.path">
+            <ui-gmap-polyline ng-repeat="travel in travels" path="travel.path">
             </ui-gmap-polyline>
         </ui-gmap-google-map>
     </div>

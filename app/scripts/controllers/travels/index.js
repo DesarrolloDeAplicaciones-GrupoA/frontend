@@ -18,13 +18,13 @@ angular.module('desappGroupABackendApp')
       })
       return travels;
     }
-    var routes = [];
-    $scope.routes = routes;
+    var travels = [];
+    $scope.travels = travels;
     $scope.query = "";
     $scope.search = function() {
       TravelService.search($scope.query).then(
         function(response) {
-          $scope.routes = buildPaths(response.data);
+          $scope.travels = buildPaths(response.data);
         },
         function(error) {
           console.log(error);
@@ -33,7 +33,6 @@ angular.module('desappGroupABackendApp')
     };
 
     $scope.map = {
-      route: routes,
       center: {
         latitude: -34.7132642,
         longitude: -58.2768611
@@ -42,7 +41,7 @@ angular.module('desappGroupABackendApp')
     };
 
     TravelService.all().then(function(response) {
-        $scope.routes = buildPaths(response.data);
+        $scope.travels = buildPaths(response.data);
       },
       function(error) {
         console.log(error);
