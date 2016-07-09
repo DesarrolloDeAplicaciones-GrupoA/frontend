@@ -8,7 +8,7 @@
  * Controller of the desappGroupABackendApp
  */
 angular.module('desappGroupABackendApp')
-  .controller('RoutesCtrl', function($scope, RoutesService) {
+  .controller('TravelsCtrl', function($scope, TravelService) {
 
     var buildPaths = function(travels) {
       var routes = [];
@@ -22,7 +22,7 @@ angular.module('desappGroupABackendApp')
     $scope.routes = routes;
     $scope.query = "";
     $scope.search = function() {
-      RoutesService.search($scope.query).then(
+      TravelService.search($scope.query).then(
         function(response) {
           $scope.routes = buildPaths(response.data);
         },
@@ -41,7 +41,7 @@ angular.module('desappGroupABackendApp')
       zoom: 15
     };
 
-    RoutesService.all().then(function(response) {
+    TravelService.all().then(function(response) {
         $scope.routes = buildPaths(response.data);
       },
       function(error) {
