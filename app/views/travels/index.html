@@ -16,9 +16,14 @@
         <div class="panel panel-success text-center">
             <div class="panel-heading">{{'RESULTS' | translate}}</div>
             <div class="list-group">
-                <a ng-repeat="travel in travels" href="/#/travels/{{travel.id}}" class="list-group-item list-group-item-info">
-                {{travel.nameTravel}}
-            </a>
+                <span ng-repeat="travel in travels"class="list-group-item list-group-item-info">
+                  <a href="/#/travels/{{travel.id}}">
+                    {{travel.nameTravel}}
+                  </a>
+                  <a class="pull-right text-success" href="/#/travels/{{travel.id}}/applications/new">
+                    Subirse <i class="glyphicon glyphicon-plus-sign"/>
+                  </a>
+                </span>
             </div>
         </div>
     </div>
