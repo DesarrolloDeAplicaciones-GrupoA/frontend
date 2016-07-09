@@ -15,7 +15,8 @@
               <div class="row">
                 <div class="col-lg-4">
                   <p class="text-center">
-                    <span class="glyphicon glyphicon-user icon-size"></span>
+                    <img ng-show="userInfo.picture" class="img-circle user-profile-image" ng-src="{{userInfo.picture}}" alt="{{userInfo.fullName}}" />
+                    <span ng-hide="userInfo.picture" class="glyphicon glyphicon-user icon-size"></span>
                   </p>
                 </div>
                 <div class="col-lg-8">
@@ -123,4 +124,3 @@
     <li ng-hide="authService.isLoggedIn()"><a ng-href="/#/login">Login</a></li>
   </ul>
 </div>
-

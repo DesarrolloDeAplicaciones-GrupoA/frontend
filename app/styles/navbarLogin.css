@@ -4,6 +4,12 @@
     padding: 10px;
     padding-bottom: 0px;
 }
+
+.user-profile-image {
+  max-width: 87px;
+  max-height: 87px;
+}
+
 .navbar-login-session
 {
     padding: 10px;
@@ -49,7 +55,7 @@
 .navbar-nav.navbar-right:last-child {
 margin-right: 15px !important;
 }
-.navbar-footer 
+.navbar-footer
 {
     background-color:#DDD;
 }
