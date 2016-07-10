@@ -25,13 +25,13 @@ angular.module('desappGroupABackendApp')
       zoom: 15
     };
     $scope.days = [
-      'lunes',
-      'martes',
-      'miercoles',
-      'jueves',
-      'viernes',
-      'sabado',
-      'domingo'
+      'MONDAY',
+      'TUESDAY',
+      'WEDNESDAY',
+      'THRUSDAY',
+      'FRIDAY',
+      'SATURDAY',
+      'SUNDAY'
     ];
 
     $scope.dt = new Date();

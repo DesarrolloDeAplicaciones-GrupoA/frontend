@@ -42,7 +42,17 @@ angular.module('desappGroupABackendApp')
         FREQUENCY: "frequency",
         FUEL: "fuel",
         TOLL: "toll",
-        SELECT_DATE: "select a date"
+        SELECT_DATE: "select a date",
+        APPLY: "apply",
+        BACK: "back",
+        MONDAY: "monday",
+        TUESDAY: "tuesday",
+        WEDNESDAY: "wednesday",
+        THRUSDAY: "thruesday",
+        FRIDAY: "friday",
+        SATURDAY: "saturday",
+        SUNDAY: "sunday"
+
       })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
@@ -84,7 +94,16 @@ angular.module('desappGroupABackendApp')
         FREQUENCY: "frecuencia",
         FUEL: "combustible",
         TOLL: "costo",
-        SELECT_DATE: "seleccione una fecha"
+        SELECT_DATE: "seleccione una fecha",
+        APPLY: "solicitar",
+        BACK: "volver",
+        MONDAY: "lunes",
+        TUESDAY: "martes",
+        WEDNESDAY: "miercoles",
+        THRUSDAY: "jueves",
+        FRIDAY: "viernes",
+        SATURDAY: "sabado",
+        SUNDAY: "domingo"
       });
     $translateProvider.preferredLanguage('es');
   });

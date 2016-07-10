@@ -12,7 +12,7 @@
 <div class="row well application-new" ng-hide="loading">
     <div class="col-md-3 travel-description">
 
-      <div class="panel panel-default">
+      <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">{{travel.nameTravel}}</h3>
         </div>
@@ -26,8 +26,8 @@
 
             <dt class="text-capitalize">{{'FREQUENCY' | translate}}</dt>
             <dd ng-repeat="day in days">
-              <label class="checkbox-inline disabled">
-                <input type="checkbox" id="inlineCheckbox1" value="{{day}}" ng-checked="dayIsPresent(day)" disabled> {{day}}
+              <label class="checkbox-inline disabled text-capitalize">
+                <input type="checkbox" id="inlineCheckbox1" value="{{day}}" ng-checked="dayIsPresent(day)" disabled> {{day | translate}}
               </label>
             </dd>
           </dl>
@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-6">
 
-        <div class="panel panel-default">
+        <div class="panel panel-info">
           <div class="panel-heading">
             <h3 class="panel-title"><dt class="text-capitalize">{{'SELECT_DATE' | translate}}</dt></h3>
           </div>
@@ -52,13 +52,13 @@
     </div>
 
     <div class="col-md-3">
-        <div class="panel panel-default">
+        <div class="panel panel-success">
           <div class="panel-heading">
-            Apply!
+            {{'APPLY' | translate}}
           </div>
           <div class="panel-body">
-            <button type="button" name="button" ng-click="save(newApplication)"class="btn btn-success">Apply!</button>
-            <a href="/#/travels/" class="btn btn-danger">Back</a>
+            <button type="button" name="button" ng-click="save(newApplication)"class="btn btn-success">{{'APPLY' | translate}}!</button>
+            <a href="/#/travels/" class="btn btn-danger">{{'BACK' | translate}}!</a>
           </div>
         </div>
 
