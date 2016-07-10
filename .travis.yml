@@ -5,7 +5,7 @@ before_install:
   - rvm install 2.2.3
 install:
   - npm upgrade -g npm
-  - npm install -g grunt-cli bower yo generator-karma generator-angular
+  - npm install -g grunt grunt-cli bower yo generator-karma generator-angular
   - gem install compass
   - npm install
   - bower install
