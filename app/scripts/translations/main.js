@@ -51,7 +51,12 @@ angular.module('desappGroupABackendApp')
         THRUSDAY: "thruesday",
         FRIDAY: "friday",
         SATURDAY: "saturday",
-        SUNDAY: "sunday"
+        SUNDAY: "sunday",
+        STATE: "state",
+        TRAVEL_NAME: "travel name",
+        UP_POINT: "up point",
+        DOWN_POINT: "down point",
+        APPLICATIONS: "applications"
 
       })
       .translations('es', {
@@ -103,7 +108,12 @@ angular.module('desappGroupABackendApp')
         THRUSDAY: "jueves",
         FRIDAY: "viernes",
         SATURDAY: "sabado",
-        SUNDAY: "domingo"
+        SUNDAY: "domingo",
+        STATE: "estado",
+        TRAVEL_NAME: "viaje",
+        UP_POINT: "sube en",
+        DOWN_POINT: "baja en",
+        APPLICATIONS: "solicitudes"
       });
     $translateProvider.preferredLanguage('es');
   });
