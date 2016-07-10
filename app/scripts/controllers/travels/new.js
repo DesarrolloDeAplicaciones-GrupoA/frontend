@@ -44,9 +44,6 @@ angular.module('desappGroupABackendApp')
       console.log(error);
     });
 
-    $scope.allLatitudes = []
-    $scope.allLongitudes = []
-
     $scope.save = function (travel) {
       travel.inicio = Date.parse(travel.inicio);
       travel.fin = Date.parse(travel.fin);

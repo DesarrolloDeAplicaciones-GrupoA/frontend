@@ -68,13 +68,13 @@
 
       <div class="col-sm-10">
         <select name="inicioLatitud" id="inicioLatitud" ng-model="newTravel.inicioLatitud">
-          <option ng-repeat="option in allLatitudes" value="{{option}}">Latitud:{{option}}</option>
+          <option ng-repeat="option in allLatitudes track by $index" value="{{option}}">Latitud:{{option}}</option>
         </select>
       </div>
 
       <div class="col-sm-10">
         <select name="inicioLongitud" id="inicioLongitud" ng-model="newTravel.inicioLongitud">
-          <option ng-repeat="option in allLongitudes" value="{{option}}">Longitud:{{option}}</option>
+          <option ng-repeat="option in allLongitudes track by $index" value="{{option}}">Longitud:{{option}}</option>
         </select>
       </div>
 
@@ -84,13 +84,13 @@
       <label for="nameTravel" class="col-sm-2 control-label">Route end point</label>
       <div class="col-sm-10">
         <select name="finLatitud" id="finLatitud" ng-model="newTravel.finLatitud">
-          <option ng-repeat="option in allLatitudes" value="{{option}}">Latitud:{{option}}</option>
+          <option ng-repeat="option in allLatitudes track by $index" value="{{option}}">Latitud:{{option}}</option>
         </select>
       </div>
 
       <div class="col-sm-10">
         <select name="finLongitud" id="finLongitud" ng-model="newTravel.finLongitud">
-          <option ng-repeat="option in allLongitudes" value="{{option}}">Longitud:{{option}}</option>
+          <option ng-repeat="option in allLongitudes track by $index" value="{{option}}">Longitud:{{option}}</option>
         </select>
       </div>
     </div>
