@@ -20,7 +20,7 @@ angular
     'LocalStorageModule',
     'config',
     'pascalprecht.translate',
-    'ui.bootstrap.datetimepicker',
+    'ui.bootstrap',
     'checklist-model'
   ]).config(function($routeProvider) {
     $routeProvider
@@ -38,6 +38,16 @@ angular
         templateUrl: 'views/travels/index.html',
         controller: 'TravelsCtrl',
         controllerAs: 'travels'
+      })
+      .when('/travels/:travelId/applications/new', {
+        templateUrl: 'views/applications/new.html',
+        controller: 'NewApplicationCtrl',
+        controllerAs: 'newApplicationCtrl'
+      })
+      .when('/applications/mine', {
+        templateUrl: 'views/applications/index.html',
+        controller: 'ApplicationsCtrl',
+        controllerAs: 'applicationsCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -104,7 +114,7 @@ angular
       });
   }).config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
-      key: '', // Ask for this!
+      key: 'AIzaSyARN9MGWcIdU-FyopHAWEG6YFvpAivpEnQ', // Ask for this!
       v: '3.23', //defaults to latest 3.X anyhow
       libraries: 'weather,geometry,visualization'
     });

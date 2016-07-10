@@ -1,0 +1,76 @@
+<div class="row" ng-show="loading">
+    <div class="col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">Loading...</div>
+          <div class="panel-body">
+            <h2 class="text-center">Loading... Please wait...</h2>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="row well application-new" ng-hide="loading">
+    <div class="col-md-3 travel-description">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{travel.nameTravel}}</h3>
+        </div>
+        <div class="panel-body">
+          <dl class="dl-horizontal">
+            <dt>Toll</dt>
+            <dd>{{travel.toll}}</dd>
+
+            <dt>Fuel</dt>
+            <dd>{{travel.fuel}}</dd>
+
+            <dt>Frequency</dt>
+            <dd ng-repeat="day in days">
+              <label class="checkbox-inline disabled">
+                <input type="checkbox" id="inlineCheckbox1" value="{{day}}" ng-checked="dayIsPresent(day)" disabled> {{day}}
+              </label>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Selecte date</h3>
+          </div>
+          <div class="panel-body text-center">
+            <pre><em>{{dt | date:'fullDate' }}</em></pre>
+            <div style="display:inline-block; min-height:290px;">
+              <uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></uib-datepicker>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Apply!
+          </div>
+          <div class="panel-body">
+            <button type="button" name="button" ng-click="save(newApplication)"class="btn btn-success">Apply!</button>
+            <a href="/#/travels/" class="btn btn-danger">Back</a>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row well" ng-hide="loading">
+    <div class="col-md-12">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-polyline path="travel.path">
+            </ui-gmap-polyline>
+        </ui-gmap-google-map>
+    </div>
+</div>

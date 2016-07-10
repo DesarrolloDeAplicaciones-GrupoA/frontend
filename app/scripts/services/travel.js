@@ -22,6 +22,12 @@ angular.module('desappGroupABackendApp')
           url: ENV.apiEndpoint + 'travels/search/?text=' + text
         });
       },
+      getDetails: function(id) {
+        return $http({
+          method: 'get',
+          url: ENV.apiEndpoint + 'travels/' + id + "/details"
+        });
+      },
       get: function(id) {
         return $http({
           method: 'get',

@@ -1,0 +1,25 @@
+``<div class="well">
+  <h2 class="text-center">Applications</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Travel name</th>
+      <th>State</th>
+      <th>up point</th>
+      <th>down point</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="application in applications" ng-class="{warning: application.pending, success: application.approved, danger: application.rejected}">
+      <td>{{ application.id }}</td>
+      <td>{{application.travel.nameTravel}}</td>
+      <td ng-show="application.pending" class="text-center"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></td>
+      <td ng-show="application.approved" class="text-center"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></td>
+      <td ng-show="application.rejected" class="text-center"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></td>
+      <td>{{application.upPoint}}</td>
+      <td>{{application.downPoint}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

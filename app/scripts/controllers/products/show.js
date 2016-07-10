@@ -8,10 +8,10 @@
  * Controller of the desappGroupABackendApp
  */
 
- //var myApp = angular.module('desappGroupABackendApp', []);
+//var myApp = angular.module('desappGroupABackendApp', []);
 
 angular.module('desappGroupABackendApp')
- .controller('ShowProductCtrl', function($scope, ProductService, $routeParams) {
+  .controller('ShowProductCtrl', function($scope, ProductService, $routeParams) {
     $scope.loading = true;
     $scope.product = {};
     ProductService.get($routeParams.id).then(function(response) {
