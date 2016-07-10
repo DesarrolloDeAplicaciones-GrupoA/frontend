@@ -40,7 +40,7 @@ angular.module('desappGroupABackendApp')
       })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
-        TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehículo que permita llevar al menos 2 personas.",
+        TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehiculo que permita llevar al menos 2 personas.",
         LOOK_UP_TRIP: "Buscar recorrido donde subir",
         LOGIN_FOR_SUM: "Inciar sesion para sumar a un recorrido",
         ADD_VEHICLE: "Agregar un vehiculo nuevo",
