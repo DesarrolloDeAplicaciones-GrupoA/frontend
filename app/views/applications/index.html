@@ -1,0 +1,21 @@
+``<div class="well">
+  <h2 class="text-center">Applications</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Travel name</th>
+      <th>up point</th>
+      <th>down point</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="application in applications">
+      <td>{{ application.id }}</td>
+      <td>{{application.travel.nameTravel}}</td>
+      <td>{{application.upPoint}}</td>
+      <td>{{application.downPoint}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -44,6 +44,11 @@ angular
         controller: 'NewApplicationCtrl',
         controllerAs: 'newApplicationCtrl'
       })
+      .when('/applications/mine', {
+        templateUrl: 'views/applications/index.html',
+        controller: 'ApplicationsCtrl',
+        controllerAs: 'applicationsCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
