@@ -13,8 +13,10 @@ angular.module('desappGroupABackendApp')
       nameTravel: "",
       fuel: 0,
       toll: 0,
-      startPoint: {inicioLatitud: 0, inicioLongitud: 0},
-      endPoint: {finLatitud: 0, finLongitud: 0},
+      inicioLatitud: 0,
+      inicioLongitud: 0,
+      finLatitud: 0,
+      finLongitud: 0,
       inicio: "",
       fin: "",
       frequency: []
@@ -30,13 +32,20 @@ angular.module('desappGroupABackendApp')
       {id: 7, text: 'domingo'}
     ];
 
-    $scope.allPoints = [];
-
     PointService.all().then(function (response) {
       $scope.allPoints = response.data;
+      $scope.allLatitudes = $scope.allPoints.map(function (p) {
+        return p.latitude
+      });
+      $scope.allLongitudes = $scope.allPoints.map(function (p) {
+        return p.longitude
+      });
     }, function (error) {
       console.log(error);
     });
+
+    $scope.allLatitudes = []
+    $scope.allLongitudes = []
 
     $scope.save = function (travel) {
       travel.inicio = Date.parse(travel.inicio);
