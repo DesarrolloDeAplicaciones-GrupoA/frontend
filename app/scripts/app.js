@@ -21,6 +21,7 @@ angular
     'config',
     'pascalprecht.translate',
     'ui.bootstrap',
+    'ui-notification',
     'checklist-model'
   ]).config(function($routeProvider) {
     $routeProvider
@@ -112,6 +113,16 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  }).config(function(NotificationProvider) {
+    NotificationProvider.setOptions({
+      delay: 5000,
+      startTop: 20,
+      startRight: 10,
+      verticalSpacing: 20,
+      horizontalSpacing: 20,
+      positionX: 'right',
+      positionY: 'bottom'
+    });
   }).config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyARN9MGWcIdU-FyopHAWEG6YFvpAivpEnQ', // Ask for this!
