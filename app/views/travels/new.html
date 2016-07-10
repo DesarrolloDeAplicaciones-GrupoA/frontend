@@ -96,6 +96,7 @@
     </div>
 
     <div class="form-group">
+      <label for="nameTravel" class="col-sm-2 control-label">Frequency</label>
       <label ng-repeat="day in days">
         <input type="checkbox" checklist-model="newTravel.frequency" checklist-value="day.id"> {{day.text}}
       </label>

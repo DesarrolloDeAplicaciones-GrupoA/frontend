@@ -22,7 +22,8 @@ angular
     'pascalprecht.translate',
     'ui.bootstrap',
     'ui-notification',
-    'checklist-model'
+    'checklist-model',
+    'ui.bootstrap.datetimepicker'
   ]).config(function($routeProvider) {
     $routeProvider
       .when('/', {
