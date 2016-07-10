@@ -35,8 +35,14 @@ angular.module('desappGroupABackendApp')
         Team_A: "Team of teams, A team, the team",
         MESSAGE_INBOX: "INBOX",
         MESSAGE_OUTBOX: "OUTBOX",
-        About_this_site: "About this awsome site"
-
+        About_this_site: "About this awsome site",
+        TAKE_TRIP: "Take this trip!",
+        LOADING: "loading",
+        PLEASE_WAIT: "please wait",
+        FREQUENCY: "frequency",
+        FUEL: "fuel",
+        TOLL: "toll",
+        SELECT_DATE: "select a date"
       })
       .translations('es', {
         PAGETITLE: '¡Subi que te llevo!',
@@ -71,7 +77,14 @@ angular.module('desappGroupABackendApp')
         Team_A: "El equipo A-PlusPlus",
         MESSAGE_INBOX: "Bandeja de Entrada",
         MESSAGE_OUTBOX: "Bandeja de Salida",
-        About_this_site: "Acerca del sitio"
+        About_this_site: "Acerca del sitio",
+        TAKE_TRIP: "Subirse!",
+        LOADING: "cargando",
+        PLEASE_WAIT: "por favor espere",
+        FREQUENCY: "frecuencia",
+        FUEL: "combustible",
+        TOLL: "costo",
+        SELECT_DATE: "seleccione una fecha"
       });
     $translateProvider.preferredLanguage('es');
   });

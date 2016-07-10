@@ -1,9 +1,9 @@
 <div class="row" ng-show="loading">
     <div class="col-md-12">
       <div class="panel panel-info">
-        <div class="panel-heading">Loading...</div>
+        <div class="panel-heading">{{'LOADING' | translate}}...</div>
           <div class="panel-body">
-            <h2 class="text-center">Loading... Please wait...</h2>
+            <h2 class="text-center">{{'LOADING' | translate}}... {{'PLEASE_WAIT' | translate}}...</h2>
           </div>
       </div>
     </div>
@@ -18,13 +18,13 @@
         </div>
         <div class="panel-body">
           <dl class="dl-horizontal">
-            <dt>Toll</dt>
+            <dt class="text-capitalize">{{'TOLL' | translate}}</dt>
             <dd>{{travel.toll}}</dd>
 
-            <dt>Fuel</dt>
+            <dt class="text-capitalize">{{'FUEL' | translate}}</dt>
             <dd>{{travel.fuel}}</dd>
 
-            <dt>Frequency</dt>
+            <dt class="text-capitalize">{{'FREQUENCY' | translate}}</dt>
             <dd ng-repeat="day in days">
               <label class="checkbox-inline disabled">
                 <input type="checkbox" id="inlineCheckbox1" value="{{day}}" ng-checked="dayIsPresent(day)" disabled> {{day}}
@@ -39,7 +39,7 @@
 
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Selecte date</h3>
+            <h3 class="panel-title"><dt class="text-capitalize">{{'SELECT_DATE' | translate}}</dt></h3>
           </div>
           <div class="panel-body text-center">
             <pre><em>{{dt | date:'fullDate' }}</em></pre>
