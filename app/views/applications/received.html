@@ -1,0 +1,27 @@
+<div class="well">
+  <h2 class="text-center text-capitalize">{{"APPLICATIONS"|translate}}</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr class="text-capitalize">
+      <th>#</th>
+      <th>{{'TRAVEL_NAME' | translate}}</th>
+      <th>{{'REQUESTED_BY' | translate}}</th>
+      <th>{{'STATE' | translate}}</th>
+      <th>{{'UP_POINT' | translate}}</th>
+      <th>{{'DOWN_POINT' | translate}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="application in applications" ng-class="{warning: application.pending, success: application.approved, danger: application.rejected}">
+      <td>{{ application.id }}</td>
+      <td>{{application.travel.nameTravel}}</td>
+      <td>{{application.requester.fullName}}</td>
+      <td ng-show="application.pending" class="text-center"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></td>
+      <td ng-show="application.approved" class="text-center"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></td>
+      <td ng-show="application.rejected" class="text-center"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></td>
+      <td>{{application.upPoint}}</td>
+      <td>{{application.downPoint}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

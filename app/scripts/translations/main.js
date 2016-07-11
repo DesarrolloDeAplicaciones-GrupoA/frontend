@@ -56,7 +56,8 @@ angular.module('desappGroupABackendApp')
         TRAVEL_NAME: "travel name",
         UP_POINT: "up point",
         DOWN_POINT: "down point",
-        APPLICATIONS: "applications"
+        APPLICATIONS: "applications",
+        REQUESTED_BY: "requested by"
 
       })
       .translations('es', {
@@ -113,7 +114,8 @@ angular.module('desappGroupABackendApp')
         TRAVEL_NAME: "viaje",
         UP_POINT: "sube en",
         DOWN_POINT: "baja en",
-        APPLICATIONS: "solicitudes"
+        APPLICATIONS: "solicitudes",
+        REQUESTED_BY: "solicitado por"
       });
     $translateProvider.preferredLanguage('es');
   });

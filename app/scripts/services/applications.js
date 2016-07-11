@@ -10,6 +10,16 @@
 angular.module('desappGroupABackendApp')
   .factory('ApplicationService', function($http, AuthService, ENV) {
     return {
+      received: function() {
+        return $http({
+          method: 'get',
+          url: ENV.apiEndpoint + 'applications/received/',
+          params: {
+            token: AuthService.getToken()
+          }
+        });
+
+      },
       mine: function() {
         return $http({
           method: 'get',

@@ -51,6 +51,11 @@ angular
         controller: 'ApplicationsCtrl',
         controllerAs: 'applicationsCtrl'
       })
+      .when('/applications/received', {
+        templateUrl: 'views/applications/received.html',
+        controller: 'ReceivedApplicationsCtrl',
+        controllerAs: 'applicationsCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
