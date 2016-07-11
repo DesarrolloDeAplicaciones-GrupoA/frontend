@@ -57,7 +57,10 @@ angular.module('desappGroupABackendApp')
         UP_POINT: "up point",
         DOWN_POINT: "down point",
         APPLICATIONS: "applications",
-        REQUESTED_BY: "requested by"
+        REQUESTED_BY: "requested by",
+        REJECT: "reject",
+        ACCEPT: "acept",
+        OPTIONS: "options"
 
       })
       .translations('es', {
@@ -115,7 +118,10 @@ angular.module('desappGroupABackendApp')
         UP_POINT: "sube en",
         DOWN_POINT: "baja en",
         APPLICATIONS: "solicitudes",
-        REQUESTED_BY: "solicitado por"
+        REQUESTED_BY: "solicitado por",
+        REJECT: "denegar",
+        ACCEPT: "aceptar",
+        OPTIONS: "opciones"
       });
     $translateProvider.preferredLanguage('es');
   });
