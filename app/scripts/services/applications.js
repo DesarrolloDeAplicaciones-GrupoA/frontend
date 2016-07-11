@@ -40,6 +40,24 @@ angular.module('desappGroupABackendApp')
           data: newApplication
         });
 
+      },
+      approve: function(application) {
+        return $http({
+          method: 'put',
+          url: ENV.apiEndpoint + 'applications/' + application.id + "/approve/",
+          params: {
+            token: AuthService.getToken()
+          }
+        });
+      },
+      reject: function(application) {
+        return $http({
+          method: 'put',
+          url: ENV.apiEndpoint + 'applications/' + application.id + "/reject/",
+          params: {
+            token: AuthService.getToken()
+          }
+        });
       }
     };
   });
