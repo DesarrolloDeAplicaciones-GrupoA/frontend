@@ -5,9 +5,8 @@
       <label for="receiver" class="col-sm-2 control-label">{{'MESSAGE_RECEIVER' | translate}}</label>
       <div class="col-sm-10">
         <select class="selectpicker" data-live-search="true" data-size=5 ng-model="newMessage.receiver">
-          <option ng-repeat="x in allUsers" value="{{x.id}}">
+          <option ng-repeat="x in allUsers" value="{{x.id}}" id="receiver">
             {{ x.fullName }}
-            <input type="hidden"/>
           </option>
 
         </select>

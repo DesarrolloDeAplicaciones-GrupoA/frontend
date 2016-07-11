@@ -20,7 +20,7 @@
         <tbody>
         <tr ng-repeat="x in inbox | orderBy: date">
           <td><a style="cursor:pointer" href="/#/messages/{{ x.id }}" ><span class="glyphicon glyphicon-envelope"></span></a></td>
-          <td>{{ x.sender }}</td>
+          <td><a href="/#/user/{{ x.idSender}}" ></a>{{ x.sender }}</td>
           <td>{{ x.subject }}</td>
           <td>{{ x.isPublic }}</td>
           <td>{{ x.dt }}</td>
@@ -28,15 +28,14 @@
         </tbody>
       </table>
     </div>
-
-  </div>
-  <div id="menu1" class="tab-pane fade">
+    <!--<div id="menu1" class="tab-pane fade">
     <table class="table table-striped">
       <thead>
       <tr>
         <th>{{'MESSAGE' | translate}}</th>
         <th>{{'MESSAGE_SENDER' | translate}}</th>
         <th>{{'MESSAGE_SUBJECT' | translate}}</th>
+        <th>{{'MESSAGE_PRIVACITY' | translate}}</th>
         <th>{{'DATE' | translate}}</th>
       </tr>
       </thead>
@@ -45,11 +44,15 @@
         <td><a href="/#/messages/"+x.id> </a>test<span class="glyphicon glyphicon-envelope"></span></td>
         <td>{{ x.sender }}</td>
         <td>{{ x.subject }}</td>
+        <td>{{ x.isPublic }}</td>
         <td>{{ x.dt }}</td>
       </tr>
       </tbody>
     </table>
+  </div>-->
+
   </div>
+
 
 </div>
 
