@@ -5,7 +5,7 @@ angular.module('desappGroupABackendApp')
       getMyUserInfo: function () {
         return $http({
           method: 'get',
-          url: ENV.apiEndpoint + 'userModels/userInfo',
+          url: ENV.apiEndpoint + 'userModels/myUserInfo',
           params: {
             token: AuthService.getToken()
           }

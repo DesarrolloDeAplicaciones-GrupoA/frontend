@@ -24,4 +24,5 @@ angular.module('desappGroupABackendApp')
         console.log(error);
       });
     }
+
   });

@@ -51,6 +51,11 @@ angular
         controller: 'ApplicationsCtrl',
         controllerAs: 'applicationsCtrl'
       })
+      .when('/applications/received', {
+        templateUrl: 'views/applications/received.html',
+        controller: 'ReceivedApplicationsCtrl',
+        controllerAs: 'applicationsCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
@@ -111,6 +116,16 @@ angular
         controller: 'ShowMessageCtrl',
         controllerAs: 'showMessageCtrl'
       })
+      .when('/user/:id', {
+              templateUrl: 'views/user/show.html',
+              controller: 'UserCtrl',
+              controllerAs: 'userCtrl'
+            })
+       .when('/user/myUserInfo', {
+              templateUrl: 'views/user/show.html',
+              controller: 'UserCtrl',
+              controllerAs: 'userCtrl'
+                   })
       .otherwise({
         redirectTo: '/'
       });

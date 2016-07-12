@@ -3,7 +3,7 @@
 angular.module('desappGroupABackendApp')
   .config(function($translateProvider) {
     $translateProvider.translations('en', {
-        PAGETITLE: "Let's go, come with me if you wanna live.",
+        PAGETITLE: "GET UP! I CARRY YOU",
         TITLEDESCRIPTION: "This platform allow users to share them trip by car or another vehicle enabling to take at least two people.",
         LOOK_UP_TRIP: "Look up trip to get up",
         LOGIN_FOR_SUM: "Login for summing in trip",
@@ -20,21 +20,25 @@ angular.module('desappGroupABackendApp')
         RESET: "Reset",
         CREATE: "Create",
         RESULTS: "Results",
+        USERS_INFO: "Profile",
         BUTTON_TEXT_EN: "English",
         BUTTON_TEXT_ES: "Spanish",
         PUBLIC_MESSAGES: "Public Messages",
         MESSAGE_SENDER: "Sender",
         MESSAGE_RECEIVER: "Receiver",
         MESSAGE_SUBJECT: "Subject",
+        NEW_MESSAGE: "New Message",
         MESSAGE_PRIVACITY: "Public Message",
+        MESSAGE_TEXT: "Text",
         MESSAGES: "Messages",
-        MESSAGE: "Message",
+        MESSAGE_INOUT: "Message",
         DATE: "Date",
         ADD_TRAVEL: "Add new travel",
         Enter_an_origin_location: "Enter an origin location",
         Team_A: "Team of teams, A team, the team",
         MESSAGE_INBOX: "INBOX",
         MESSAGE_OUTBOX: "OUTBOX",
+        MESSAGE_PUBLIC: "Public?",
         About_this_site: "About this awsome site",
         TAKE_TRIP: "Take this trip!",
         LOADING: "loading",
@@ -56,11 +60,17 @@ angular.module('desappGroupABackendApp')
         TRAVEL_NAME: "travel name",
         UP_POINT: "up point",
         DOWN_POINT: "down point",
-        APPLICATIONS: "applications"
+        APPLICATIONS: "applications",
+        REQUESTED_BY: "requested by",
+        REJECT: "reject",
+        GOOD_BYE: "Good bye. Come back soon!",
+        WELCOME_APP: "Welcome! Successfully logged in",
+        ACCEPT: "acept",
+        OPTIONS: "options"
 
       })
       .translations('es', {
-        PAGETITLE: '¡Subi que te llevo!',
+        PAGETITLE: '¡SUBI QUE TE LLEVO!',
         TITLEDESCRIPTION: "Plataforma donde los usuarios puedan coordinarse para compartir viajes en auto o cualquier otro vehiculo que permita llevar al menos 2 personas.",
         LOOK_UP_TRIP: "Buscar recorrido donde subir",
         LOGIN_FOR_SUM: "Inciar sesion para sumar a un recorrido",
@@ -77,15 +87,19 @@ angular.module('desappGroupABackendApp')
         RESET: "Reset",
         CREATE: "Crear",
         RESULTS: "Resultados",
+        USERS_INFO: "Perfil",
         BUTTON_TEXT_EN: "English",
         BUTTON_TEXT_ES: "Español",
         PUBLIC_MESSAGES: "Mensajes Publicos",
+        NEW_MESSAGE: "Nuevo Mensaje",
+        MESSAGE_TEXT: "Cuerpo",
         MESSAGE_SENDER: "Remitente",
         MESSAGE_PRIVACITY: "Mensaje Publico",
+        MESSAGE_PUBLIC: "Publico?",
         MESSAGE_RECEIVER: "Destinatario",
         MESSAGE_SUBJECT: "Asunto",
         MESSAGES: "Mensajes",
-        MESSAGE: "Mensaje",
+        MESSAGE_INOUT: "Mensaje",
         DATE: "Dia",
         ADD_TRAVEL: "agregar un viaje nuevo",
         Enter_an_origin_location: "Seleccione direccion de origen",
@@ -113,7 +127,13 @@ angular.module('desappGroupABackendApp')
         TRAVEL_NAME: "viaje",
         UP_POINT: "sube en",
         DOWN_POINT: "baja en",
-        APPLICATIONS: "solicitudes"
+        APPLICATIONS: "solicitudes",
+        REQUESTED_BY: "solicitado por",
+        REJECT: "denegar",
+        ACCEPT: "aceptar",
+        GOOD_BYE: "Hasta luego, vuelva pronto!",
+        WELCOME_APP: "Bienvenido! Logeado con exito!",
+        OPTIONS: "opciones"
       });
     $translateProvider.preferredLanguage('es');
   });

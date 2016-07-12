@@ -19,7 +19,7 @@ angular.module('desappGroupABackendApp')
       auth) {
       loginService.googleLogin(auth.detail.code)
         .then(function(response) {
-            Notification.success('Welcome! Successfully logged in');
+            Notification.success("Welcome! Successfully logged in");
             authService.login(response.data.token);
             $window.location.assign('/#/');
           },
