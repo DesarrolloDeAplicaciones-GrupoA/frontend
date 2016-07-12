@@ -8,7 +8,7 @@
  */
 
 angular.module('desappGroupABackendApp')
-  .controller('NewMessageCtrl', function ($scope, MessageService, UserService, $window) {
+  .controller('NewMessageCtrl', function ($scope, MessageService, UserService, $window,Notification) {
     $scope.newMessage = {
       receiver: "",
       subject: "",
@@ -19,12 +19,13 @@ angular.module('desappGroupABackendApp')
     $scope.save = function (message) {
       MessageService.save(message).then(function (response) {
           $window.location.assign('/#/messages/' + response.data.id);
+          Notification.primary("Message created successfully")
         },
         function (error) {
           console.log(error);
         });
     };
-    //$scope.allUsers=["pepe","juan","lopez"];
+    //$scope.allUsers=["pepe","juan","lopez"];MESSAGE_CREATED
     $scope.allUsers = [];
     UserService.getAllUsers().then(function (response) {
       $scope.allUsers = response.data;

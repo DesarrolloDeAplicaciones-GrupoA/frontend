@@ -116,6 +116,16 @@ angular
         controller: 'ShowMessageCtrl',
         controllerAs: 'showMessageCtrl'
       })
+      .when('/user/:id', {
+              templateUrl: 'views/user/show.html',
+              controller: 'UserCtrl',
+              controllerAs: 'userCtrl'
+            })
+       .when('/user/myUserInfo', {
+              templateUrl: 'views/user/show.html',
+              controller: 'UserCtrl',
+              controllerAs: 'userCtrl'
+                   })
       .otherwise({
         redirectTo: '/'
       });

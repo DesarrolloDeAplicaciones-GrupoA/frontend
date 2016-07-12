@@ -4,10 +4,13 @@
 @import "./routes";
 @import "./navbarLogin";
 @import "./applications";
+@import 'https://fonts.googleapis.com/css?family=Amaranth|Shadows+Into+Light';
+
 
 @font-face {
     font-family: 'Aquatico-Regular'; /*a name to be used later*/
     src: url('../fonts/Aquatico-Regular.otf'); /*URL to font*/
+
 }
 
 .browsehappy {
@@ -35,13 +38,18 @@ body {
 }
 
 p.lead{
-    font-family: 'Aquatico-Regular';
+    #font-family: 'Aquatico-Regular';
+    font-family: 'Amaranth', sans-serif;
     color: white;
 }
 
 h1.title {
     color: white;
-    font-family: 'Aquatico-Regular';
+    #font-family: 'Aquatico-Regular';
+      font-family: 'Shadows Into Light', cursive;
+    #font-family: 'Cherry Cream Soda', cursive;
+
+
 }
 
 

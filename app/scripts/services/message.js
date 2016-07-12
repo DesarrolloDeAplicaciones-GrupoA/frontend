@@ -1,11 +1,5 @@
 'use strict';
-/**
- * @ngdoc service
- * @name desappGroupABackendApp.product
- * @description
- * # product
- * Service in the desappGroupABackendApp.
- */
+
 angular.module('desappGroupABackendApp')
   .factory('MessageService', function($http, AuthService, ENV) {
     return {
@@ -19,7 +13,7 @@ angular.module('desappGroupABackendApp')
         return $http({
           method: 'post',
           //dataType: 'json',
-          url: ENV.apiEndpoint + 'messages/new',
+          url: ENV.apiEndpoint + 'messages/new/',
            params: {
             token: AuthService.getToken()},
           data: newMessage //angular.copy(newMessage);

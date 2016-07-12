@@ -19,7 +19,7 @@ angular.module('desappGroupABackendApp')
       function(error) {
         console.log(error);
       })
-     MessageService.getMyInbox().then(function(response) {
+     MessageService.getMyOutbox().then(function(response) {
           $scope.outbox = response.data;
           },
       function(error) {

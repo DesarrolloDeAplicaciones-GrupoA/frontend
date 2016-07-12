@@ -10,7 +10,7 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th>{{'MESSAGE' | translate}}</th>
+          <th>{{'MESSAGE_INOUT' | translate}}</th>
           <th>{{'MESSAGE_SENDER' | translate}}</th>
           <th>{{'MESSAGE_SUBJECT' | translate}}</th>
           <th>{{'MESSAGE_PRIVACITY' | translate}}</th>
@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="x in inbox | orderBy: date">
-          <td><a style="cursor:pointer" href="/#/messages/{{ x.id }}" ><span class="glyphicon glyphicon-envelope"></span></a></td>
+          <td><a href="/#/messages/{{ x.id }}" ><span class="glyphicon glyphicon-envelope"></span></a></td>
           <td><a href="/#/user/{{ x.idSender}}" ></a>{{ x.sender }}</td>
           <td>{{ x.subject }}</td>
           <td>{{ x.isPublic }}</td>
