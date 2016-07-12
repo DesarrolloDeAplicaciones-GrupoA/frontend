@@ -22,7 +22,7 @@
           <td><a href="/#/messages/{{ x.id }}" ><span class="glyphicon glyphicon-envelope"></span></a></td>
           <td><a href="/#/user/{{ x.idSender}}" ></a>{{ x.sender }}</td>
           <td>{{ x.subject }}</td>
-          <td>{{ x.isPublic }}</td>
+          <td>{{x.public ? "True":"False"}}</td>
           <td>{{ x.dt }}</td>
         </tr>
         </tbody>

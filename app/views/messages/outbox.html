@@ -20,9 +20,9 @@
         <tbody>
         <tr ng-repeat="x in outbox | orderBy: date">
           <td><a href="/#/messages/{{ x.id}}"><span class="glyphicon glyphicon-envelope"></span></a></td>
-          <td><a href="/#/user/{{x.idReceiver}}" ></a>{{ x.receiver }}</td>
+          <td><a href="/#/user/{{x.idReceiver}}" >{{ x.receiver }}</a></td>
           <td>{{ x.subject }}</td>
-          <td>{{ x.isPublic }}</td>
+          <td>{{x.public ? "True":"False"}}</td>
           <td>{{ x.dt }}</td>
         </tr>
         </tbody>

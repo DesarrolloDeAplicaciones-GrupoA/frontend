@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('desappGroupABackendApp')
-  .controller('UserCtrl', function($scope, AuthService, $translate, UserService, Notification) {
+  .controller('UserCtrl', function($scope, AuthService, $translate, UserService, $routeParams, Notification) {
     $scope.authService = AuthService;
     $scope.user=[];
-    UserService.getUserInfo(id).then(function(response) {
+    UserService.getUserInfo($routeParams.id).then(function(response) {
             $scope.user = response.data;
           }, function(error) {
             console.log(error);
