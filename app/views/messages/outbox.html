@@ -22,7 +22,8 @@
           <td><a href="/#/messages/{{ x.id}}"><span class="glyphicon glyphicon-envelope"></span></a></td>
           <td><a href="/#/user/{{x.idReceiver}}" >{{ x.receiver }}</a></td>
           <td>{{ x.subject }}</td>
-          <td>{{x.public ? "True":"False"}}</td>
+          <td ng-show="x.public"><span class="glyphicon glyphicon-ok"></span></td>
+          <td ng-show="!x.public"><span class="glyphicon glyphicon-remove"></span></td>
           <td>{{ x.dt }}</td>
         </tr>
         </tbody>
