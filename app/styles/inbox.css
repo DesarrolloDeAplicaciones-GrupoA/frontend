@@ -43,7 +43,7 @@ a:hover {
 }
 h1,h2,h3,h4{
   color:#666;
-  font-weight:light;
+  font-weight:lighter;
 }
 p.lead {
   font-family:arial, sans-serif;
@@ -135,3 +135,4 @@ a.list-group-item.active, .nav-pills>li.active>a, .nav-pills>li.active>a:hover, 
 }
 [class*='-default']:not([class*='text-']){
   background-color:#f2f2f2;
+}

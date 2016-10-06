@@ -8,17 +8,17 @@
  * Controller of the desappGroupABackendApp
  */
 
- //var myApp = angular.module('myApp', []);
+//var myApp = angular.module('myApp', []);
 //var myApp = angular.module('desappGroupABackendApp', []);
 
 angular.module('desappGroupABackendApp')
-  .controller('ProductsCtrl', function($scope, ProductService, $routeParams) {
+  .controller('ProductsCtrl', function ($scope, ProductService, $routeParams) {
     $scope.loading = true;
     $scope.products = [];
-    ProductService.getAll().then(function(response) {
+    ProductService.getAll().then(function (response) {
         $scope.products = response.data;
       },
-      function(error) {
+      function (error) {
         console.log(error);
       });
   });

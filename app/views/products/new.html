@@ -1,29 +1,34 @@
 <div class="well">
-    <h2 class="text-center">{{'ADD_PRODUCT' | translate}}</h2>
-      <form novalidate class="form-horizontal">
-      <div class="form-group">
-        <label for="nameProduct" class="col-sm-2 control-label">{{'PRODUCT_NAME' | translate}}</label>
-          <div class="col-sm-10">
-            <input value="" required minlength="3" ng-model="newProduct.name" type="text" class="form-control" id="name" placeholder="Product name">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="stock" class="col-sm-2 control-label">Stock</label>
-          <div class="col-sm-10">
-            <input value="" min="1" required integer ng-model="newProduct.stock" type="number" class="form-control" id="stock">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="pointCost" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
-          <div class="col-sm-10">
-            <input value="" min="1000" required integer ng-model="newProduct.pointCost" type="number" class="form-control" id="pointCost">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" ng-click="save(newProduct)" class="btn btn-success">{{'CREATE' | translate}}</button>
-            <button class="btn btn-danger">Cancel</button>
-          </div>
-        </div>
-      </form>
+  <h2 class="text-center">{{'ADD_PRODUCT' | translate}}</h2>
+  <form novalidate class="form-horizontal">
+
+    <div class="form-group">
+      <label for="nameProduct" class="col-sm-2 control-label">{{'PRODUCT_NAME' | translate}}</label>
+      <div class="col-sm-10">
+        <input value="" required minlength="3" ng-model="newProduct.name" type="text" class="form-control"
+               id="nameProduct" placeholder="Product name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="stock" class="col-sm-2 control-label">Stock</label>
+      <div class="col-sm-10">
+        <input value="" min="1" required integer ng-model="newProduct.stock" type="number" class="form-control"
+               id="stock">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pointCost" class="col-sm-2 control-label">{{'POINT_COST' | translate}}</label>
+      <div class="col-sm-10">
+        <input value="" min="1000" required integer ng-model="newProduct.pointCost" type="number" class="form-control"
+               id="pointCost">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" ng-click="save(newProduct)" class="btn btn-success">{{'CREATE' | translate}}</button>
+        <button class="btn btn-danger">Cancel</button>
+      </div>
+    </div>
+  </form>
 </div>

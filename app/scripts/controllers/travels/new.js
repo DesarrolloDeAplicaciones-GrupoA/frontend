@@ -55,6 +55,8 @@ angular.module('desappGroupABackendApp')
           console.log(error);
         });
     };
+
+
     $scope.checkAll = function () {
       $scope.newTravel.frequency = $scope.days.map(function (item) {
         return item.id;
