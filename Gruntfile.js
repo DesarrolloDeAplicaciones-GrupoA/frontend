@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         constants: {
           ENV: {
             name: 'production',
-            apiEndpoint: 'http://subi-que-te-llevo-api.herokuapp.com/rest/'
+            apiEndpoint: 'https://virtual-kiosk-backend.herokuapp.com/rest/'
           }
         }
       }
